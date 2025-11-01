@@ -26,6 +26,9 @@ Existe um app Streamlit (`streamlit_markmap.py`) que transforma arquivos Markdow
 ## Executar o app (opcional)
 
 ```bash
+pyenv install 3.10.11
+pyenv local 3.10.11
+poetry env use 3.10.11
 poetry install
 poetry run streamlit run streamlit_markmap.py
 ```
