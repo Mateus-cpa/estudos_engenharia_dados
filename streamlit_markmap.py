@@ -65,8 +65,8 @@ def read_md_from_path(filepath: str) -> str:
         return ""
 
 def main():
-    st.set_page_config(page_title="MD → Markmap (Streamlit)", layout="wide")
-    st.title("Visualizador de Mapas Mentais")
+    st.set_page_config(page_title="Material de Estudos", layout="wide")
+    st.title("📚 Material de Estudos em Engenharia de Dados")
 
     # Lista de arquivos .md disponíveis
     local_files = list_local_md_files()
@@ -79,8 +79,8 @@ def main():
     with st.sidebar:
         st.markdown("### Configurações")
         selected_file = st.selectbox(
-            "Selecione um arquivo da pasta `conteudo/`:",
-            options=local_files,
+            "Selecione um arquivo:",
+            options=['Selecione um arquivo'] + local_files,
             index=0,
             format_func=lambda x: os.path.splitext(os.path.basename(x))[0].replace('_', ' ').title()
         )
@@ -96,6 +96,13 @@ def main():
         st.markdown("Este app converte arquivos Markdown da pasta `conteudo/` em mapas mentais interativos usando [Markmap](https://markmap.js.org/).")
 
     # Carregar e exibir o conteúdo do arquivo selecionado
+    if selected_file == 'Selecione um arquivo':
+        st.info("Por favor, selecione um arquivo na barra lateral.")
+        # Mostrar Readme como introdução
+        readme_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.md")
+        readme_text = read_md_from_path(readme_path)
+        st.markdown(readme_text)
+        return
     filepath = os.path.abspath(selected_file)
     md_text = read_md_from_path(filepath)
     
