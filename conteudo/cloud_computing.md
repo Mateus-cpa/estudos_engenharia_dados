@@ -30,11 +30,11 @@ Envolve proteção, privacidade e métodos de criptografias.
 1. Proteção
 2. Privacidade
 
-## Arquiterura e Infraestrutura em Nuvem
+## Arquitetura e Infraestrutura em Nuvem
 ### Virtualização
 Proporciona a facilidade e o rápido crescimento de serviços atrelados a empresas.
 
-Permite configurar e executar diversos e diferentes programas e serviços vituais poir meio de equipamentos
+Permite configurar e executar diversos e diferentes programas e serviços vituais por meio de equipamentos
 
 #### Tipos
 1. Aplicativos
@@ -148,4 +148,27 @@ A interconectividade está relacionda à união de recursos an nuvem de forma ef
 
 ## Migração para a nuvem
 
-Entender sobre análise de custos e 
+### Análise de custos
+- é um fator relevante para ocorrer de forma estratégica
+- tomar decisões comcautela para 
+    - economia
+    - eficiência
+    - escalabilidade
+
+O responsável deve:
+- Prever custos atuais e futuros;
+- Custos operacionais;
+- Pontos potenciais de ganho;
+
+É possível administrar os recursos de uma orgnaização que adere esse tipo de serviço conforme a demanda que ela tem no nomento
+
+Deve-se considerar o fator segurança.
+
+### Estratégias de implementação:
+Estratégias variam de acordo com o objetivo da organização, com o objetivo de auxiliá-las a serem melhores e aumentar sua eficiência operacional.
+
+Migração eficiente é feita por etapas ou fases.
+
+- **Rehosting**: Envolve migração direta de aplicativos e dados para a nuvem, sem modificações significativas.
+- **Replatforming**:
+- **Refactoring**:
