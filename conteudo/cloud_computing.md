@@ -64,3 +64,85 @@ Acúmulo de máquinas virtuais
 Necessiade d eservid8or físico
 
 Baixa performance de softwares e sistema
+
+### Balanceamento de carga
+Otimiza a distribuição de tráfego arquitetura e infraestrutura
+
+Eficiência operacional
+
+Alta disponibilidade
+
+### VPC
+1. É mais atual.
+2. Elemento virtual que encapsula recursos de computação e armazenamento
+3. Proporciona ambiente isolado e personalizável
+4. Atualiza redes tradicionais
+
+### VPN
+
+### Redes virtuais
+
+### Armazenamento em nuvem
+Atrelado a assuntos como:
+1. Tipos de armazenamento
+2. Escalabilidade
+3. Replicação
+
+Esses 2 últimos impulsionam a evolução, transformando espaço digital com expansão infinita e a continuidade é um fato.
+
+## Segurança
+
+Criptografia é segura, protege e garante a confidencialidade dos usuários.
+
+A segurança não é apenas uma tributo técnico, protege e garante a confidencialidade dos usuários.
+
+Autenticação multifatorial impõe uma camada adicional de proteção.
+
+Esses elementos se entrelaçam formando um conjunto de protocolos, práticas e inovações que criam e mantém o ambiente/ecossistema seguro, saudável, confiável e protegido.
+
+## Serviços e Plataformas
+### IaaS - *Infraestructure as a Service*
+Infraestrutura  flexível e escalável.
+
+Como a virtualização - transforma servidores físicos em digitais.
+
+Facilita alcação e gerenciamento de recursos.
+
+Permite que empresas cresçam de forma segura.
+
+Adaptabilidade onde os recursos se ajustam as operações, garantindo eficiência e otimização de custos.
+
+### PaaS - *Platform as a Service*
+Hospedagem e implementação de hardware e software
+
+Ambiente de desenvolvimento e implantação na nuvem
+
+Fornece aplicativos simples e complexos
+
+Devs fornecem recursos e ferramentas.
+
+É considerada uma plataforma ágil e acelerada para aplicativos, pois possui ambientes integrados que proporcionam um local propício para testes e experimentos de novos projetos virtuais que tenderam a ser fluidos e eficientes.
+
+### SaaS - *Software as a Service*
+Acesso a aplicativos diretamente na nuvem, sem instalação local e atualizações.
+
+É possível personalizar, garantindo singularidade e atendimento às necessidades.
+
+É um modelo flexífel fornecendo uma experiência única ao usuário.
+
+Segurança é necessária, crucial e existente.
+
+### Serviços de bancos de dados
+- Escalabilidade (atender conforme a demanda)
+- Gerenciamento de forma adequada.
+Ambos garantem eficiência e segurança;
+
+A interconectividade está relacionda à união de recursos an nuvem de forma eficiente.
+
+- Conectividade de rede;
+- Integração de serviços;
+- APIs;
+- Migração de dados;
+- Segurança e gerenciamento de acesso;
+- Escalabilidade.
+
