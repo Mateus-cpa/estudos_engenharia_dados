@@ -146,3 +146,6 @@ A interconectividade está relacionda à união de recursos an nuvem de forma ef
 - Segurança e gerenciamento de acesso;
 - Escalabilidade.
 
+## Migração para a nuvem
+
+Entender sobre análise de custos e 
