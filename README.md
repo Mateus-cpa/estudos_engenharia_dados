@@ -1,2 +1,12 @@
-# estudos_engenharia_dados
+# Materiais de Estudos - Engenharia de Dados
+
 Materiais de estudos da graduação em Engenharia de Dados
+
+
+# Streamlit Markmap
+
+```bash
+poetry install
+poetry run streamlit run streamlit_markmap.py
+```
+
