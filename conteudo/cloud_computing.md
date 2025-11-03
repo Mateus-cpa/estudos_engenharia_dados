@@ -65,7 +65,7 @@ Espaço em disco
 
 - Acúmulo de máquinas virtuais
 
-- Necessiade d eservid8or físico
+- Necessiade de servidor físico
 
 - Baixa performance de softwares e sistema
 
