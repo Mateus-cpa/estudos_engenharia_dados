@@ -1,10 +1,12 @@
 # Cloud Computing
 ## Conceito
 Computação em nuvem, onde é possível ter acesso remoto a diferentes tipos de softwares, armazenamento de informações e prtocessamento de dados por meio da internet.
+
 ## Introdução
 1. Antigamente eram centralizados execução, processamento e armazenamento.
 2. Agora peças menores e mais eficientes.
 3. Rede: tudo que se interconecta e possui acesso à internet
+
 ## História
 1. Início em 1950
 2. Se tornou popular em 2006 quando Eric Schimdt escreveu sobre ela.
@@ -23,9 +25,11 @@ Envolve proteção, privacidade e métodos de criptografias.
 5. Malha
 6. Árvore
 7. Híbrida
+
 ### Meios de trnasmissão
 1. Guiados (com fios)
 2. Não guiados (rádio)
+
 ### Importância da segurança
 1. Proteção
 2. Privacidade
@@ -55,15 +59,15 @@ Com baixo custo
 #### Desvantagens
 Espaço em disco
 
-Falta de acesso direto
+- Falta de acesso direto
 
-Falta de métodos de medição de desempenho
+- Falta de métodos de medição de desempenho
 
-Acúmulo de máquinas virtuais
+- Acúmulo de máquinas virtuais
 
-Necessiade d eservid8or físico
+- Necessiade d eservid8or físico
 
-Baixa performance de softwares e sistema
+- Baixa performance de softwares e sistema
 
 ### Balanceamento de carga
 Otimiza a distribuição de tráfego arquitetura e infraestrutura
