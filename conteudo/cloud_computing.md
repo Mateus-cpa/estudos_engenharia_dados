@@ -68,13 +68,14 @@ Permite configurar e executar diversos e diferentes programas e serviços vituai
 - Eficiência operacional
 - Alta disponibilidade
 
+### VPN
+Conectividade eficiente com baixo custo.
+
 ### VPC
 1. É mais atual.
 2. Elemento virtual que encapsula recursos de computação e armazenamento
 3. Proporciona ambiente isolado e personalizável
 4. Atualiza redes tradicionais
-
-### VPN
 
 ### Redes virtuais
 
@@ -96,7 +97,7 @@ Autenticação multifatorial impõe uma camada adicional de proteção.
 
 Esses elementos se entrelaçam formando um conjunto de protocolos, práticas e inovações que criam e mantém o ambiente/ecossistema seguro, saudável, confiável e protegido.
 
-## Serviços e Plataformas
+## Serviços e Plataformas em nuvem
 ### IaaS - *Infraestructure as a Service*
 Infraestrutura  flexível e escalável.
 
@@ -146,7 +147,7 @@ A interconectividade está relacionda à união de recursos an nuvem de forma ef
 
 ### Análise de custos
 - é um fator relevante para ocorrer de forma estratégica
-- tomar decisões comcautela para 
+- tomar decisões com cautela para 
     - economia
     - eficiência
     - escalabilidade
