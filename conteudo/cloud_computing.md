@@ -147,7 +147,11 @@ A interconectividade está relacionda à união de recursos an nuvem de forma ef
 
 ### Análise de custos
 - é um fator relevante para ocorrer de forma estratégica
-- tomar decisões com cautela para 
+- Análise de custo-benefício: 
+    - custo desejável, 
+    - mas com segurança mínima e
+    - eficiência suficiente.
+- tomar decisões com cautela para:
     - economia
     - eficiência
     - escalabilidade
@@ -157,15 +161,33 @@ O responsável deve:
 - Custos operacionais;
 - Pontos potenciais de ganho;
 
-É possível administrar os recursos de uma orgnaização que adere esse tipo de serviço conforme a demanda que ela tem no nomento
+É possível administrar os recursos de uma organização que adere esse tipo de serviço conforme a demanda que ela tem no momento.
 
 Deve-se considerar o fator segurança.
 
 ### Estratégias de implementação:
 Estratégias variam de acordo com o objetivo da organização, com o objetivo de auxiliá-las a serem melhores e aumentar sua eficiência operacional.
 
-Migração eficiente é feita por etapas ou fases.
+Migração eficiente é feita por meio etapas ou fases.
 
-- **Rehosting**: Envolve migração direta de aplicativos e dados para a nuvem, sem modificações significativas.
-- **Replatforming**:
-- **Refactoring**:
+- **Rehosting**: 
+    - Mais rápido e direto de aplicativos de dados para nuvem. 
+    - Mais simples dos 3. 
+    - Não aproveita todas as vantagens da nuvem. 
+    - Envolve migração direta de aplicativos e dados para a nuvem
+    - Sem modificações significativas.
+    - Lift and Shift.
+- **Replatforming**: 
+    - Intermediário. 
+    - Aplicativos são ajustados para operar na nuvem.
+    - Junção entre velocidade e otimização.
+- **Refactoring**: Mudança total da arquitetura e código virtual da organização. É o mais caro.
+
+### Conclusão
+É relevante ter boas práticas para garantir maior eficiência.
+
+Garantir maior eficiência, eficácia e inovação na organização.
+
+Garantem processos que ocasionam eficiência e bons recursos financeiros para as organizações.
+
+Deve ser considerados o monitoramento de dados, segurnaça e medidas preventivas.
