@@ -43,38 +43,30 @@ Permite configurar e executar diversos e diferentes programas e serviços vituai
 #### Tipos
 1. Aplicativos
 2. Desktop
+3. Servidores - cria máquians virtuais
+4. Arquitetura/estrutura de nuvem
 
 #### Vantagens
-Custo
+- Custo
+- Segurança
+- Facilidade de gerenciamento
+- Compatibilidade
+- Possibilidade de configurar ambientes de teste
+- Eficiente
+- Com baixo custo
 
-Segurança
-
-Compatibilidade
-
-Possibilidade de configurar ambientes de teste
-
-Eficiente
-
-Com baixo custo
 #### Desvantagens
-Espaço em disco
-
+- Espaço em disco
 - Falta de acesso direto
-
 - Falta de métodos de medição de desempenho
-
 - Acúmulo de máquinas virtuais
-
 - Necessiade de servidor físico
-
 - Baixa performance de softwares e sistema
 
 ### Balanceamento de carga
-Otimiza a distribuição de tráfego arquitetura e infraestrutura
-
-Eficiência operacional
-
-Alta disponibilidade
+- Otimiza a distribuição de tráfego arquitetura e infraestrutura
+- Eficiência operacional
+- Alta disponibilidade
 
 ### VPC
 1. É mais atual.
@@ -132,7 +124,7 @@ Acesso a aplicativos diretamente na nuvem, sem instalação local e atualizaçõ
 
 É possível personalizar, garantindo singularidade e atendimento às necessidades.
 
-É um modelo flexífel fornecendo uma experiência única ao usuário.
+É um modelo flexível fornecendo uma experiência única ao usuário.
 
 Segurança é necessária, crucial e existente.
 
