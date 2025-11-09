@@ -113,28 +113,32 @@ def main():
             st.markdown(md_text)
         
         st.markdown("### Mapa Mental Interativo")
-        
         try:
-            html_text = build_html(md_text, title)
-            
-            # Exibir o mapa mental
-            components.html(
-                html_text,
-                height=height,
-                scrolling=True
-            )
-            
-            # Botão para baixar o HTML gerado
-            filename = os.path.splitext(os.path.basename(selected_file))[0]
-            st.download_button(
-                "📥 Baixar mapa mental como HTML",
-                data=html_text,
-                file_name=f"{filename}_markmap.html",
-                mime="text/html",
-                help="Baixe o arquivo HTML para visualizar offline"
-            )
+            # pegar arquivo na pasta mapas_mentais com mesmo nome do md para exibir a imagem, mas png
+            st.image(f'mapas_mentais/{os.path.splitext(os.path.basename(selected_file))[0]}.png')
         except Exception as e:
-            st.error(f"Erro ao gerar/renderizar o mapa mental: {str(e)}")
+            
+            try:
+                html_text = build_html(md_text, title)
+                
+                # Exibir o mapa mental
+                components.html(
+                    html_text,
+                    height=height,
+                    scrolling=True
+                )
+                
+                # Botão para baixar o HTML gerado
+                filename = os.path.splitext(os.path.basename(selected_file))[0]
+                st.download_button(
+                    "📥 Baixar mapa mental como HTML",
+                    data=html_text,
+                    file_name=f"{filename}_markmap.html",
+                    mime="text/html",
+                    help="Baixe o arquivo HTML para visualizar offline"
+                )
+            except Exception as e:
+                st.error(f"Erro ao gerar/renderizar o mapa mental: {str(e)}")
 
 if __name__ == "__main__":
     main()
