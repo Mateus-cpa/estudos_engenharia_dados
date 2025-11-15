@@ -31,6 +31,7 @@ pyenv local 3.10.11
 poetry env use 3.10.11
 poetry install
 poetry run streamlit run streamlit_markmap.py
+
 ```
 
 ## Contribuindo
