@@ -43,3 +43,17 @@ O sistema de arquitetura de BI pode estar relacionado com dados, bases, document
 
 ## Data warehouse
 É um sistema de armazenamento de dados que tem por objetivo auxiliar nas tomadas de decisões.
+
+Linguagens de programação:
+- Python
+- SQL
+- Java
+
+Perda da privacidade dos dados aumenta a conscientização da importância da Proteção de Dados.
+
+Torna-se cada vez mais desafiador respeitar a privacidade das pessaos
+
+## ETL
+- **Extract**: extrair
+- **Transform**: transformar
+- **Load**: carregar
