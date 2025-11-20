@@ -73,7 +73,7 @@ Conforme Date (2004), Banco de dadosé um grande sistema computadorizado de info
 
 ## Modelagem transacional
 
-Permite representar dados de forma simples, objetiva e com alto desempenho.
+Técnica de representar dados de forma simples, objetiva e com alto desempenho. Além de compreensível
 
 É uma etapa de implementação de uma Data Warehouse e consolidam dimensões específicas para aumentar a eficácia e rapidez de consultas orgnaizadas.
 
@@ -83,3 +83,40 @@ Permite representar dados de forma simples, objetiva e com alto desempenho.
 
 Com maior quantidade de dados em escala sem precedentes, o valor dos dados também aumentou.
 
+### Técnicas de design de esquema Floco de neve e Estrela
+
+Ambos são multidimensionais
+
+### Técnicas de design de esquema Floco de neve
+
+- Modelagem com as dimensões da stabelas normalizadas e divididas em hierarquia
+- Menor ocupação do banco de dados
+- Melhor desempenho
+- Inexistência de redundância
+
+### Técnicas de design de esquema Estrela
+
+- Mais complexo
+- Mais comum
+- Composto por dois tipos de tabelas:
+    - **Tabela de fatos** , no centro do esquema
+    - **Tabela com dimensões**, ligada à tabela principal
+- Diretamente elacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias
+
+## Tipos de fatos
+- Fatos aditivos: Medidas de negócios podem ser agregadas em alguma dimensão;
+- Fatos semi-aditivos: podem ser agregados apenas em algumas dimensões;
+- Fatos não aditivos: não podem ser agregados em qualquer dimensão
+
+## Tipos de chaves nas tabelas dimensionais
+- Primárias: identifica registros exclusivos;
+- Substitutivas: será a chave primária para dimensões que mudam lentamente;
+- Estrangieras: unem duas tabelas. Geralmente:
+    - Unem de fatos e de dimensões;
+    - na tabela de fatos, sendo a chave primária na tabela de dimensão;
+
+## Tipos de dimensões
+- Tempo
+- Produto
+- Loja
+- Cliente
