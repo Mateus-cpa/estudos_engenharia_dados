@@ -85,7 +85,9 @@ Com maior quantidade de dados em escala sem precedentes, o valor dos dados tamb�
 
 ### Técnicas de design de esquema Floco de neve e Estrela
 
-Ambos são multidimensionais
+Ambos são multidimensionais.
+
+Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo c9om a disponibilidade de disco e o poder de processamento computacional.
 
 ### Técnicas de design de esquema Floco de neve
 
@@ -120,3 +122,20 @@ Ambos são multidimensionais
 - Produto
 - Loja
 - Cliente
+
+## Etapas de projeto de um modelo dimensional
+
+- Identificação de processos de negócios
+- Identificação de fatos e dimensões em seu modelo de dados dimensionais
+- Identificação dos atributos para dimensões
+- Definição da granularidade dos fatos comerciais
+- Armazenamento de informações históricas (dimensões que modam lentamente)
+
+## Benefícios da modelagem dimensional
+
+- otimização de desempenho;
+- recuperação rápida de dados;
+- flexibilidade;
+- análise multidimensional;
+- redução na redundância de dados.
+
