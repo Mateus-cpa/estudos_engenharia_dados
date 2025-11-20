@@ -139,3 +139,37 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo c9o
 - análise multidimensional;
 - redução na redundância de dados.
 
+## Hierarquia de modelos dimensionais
+Hierarquia é a relação entre as dimensões e os atributos de uma determinada informação.
+
+Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabwlas com bancos de dados.
+
+Os dados são disposrtos dos níveis mais detalhados para os menos detalhados.
+
+##  Níveis de granularidade em modelos dimensionais
+
+Se referem a informações armazenadas em tabeelas, que devem possuir a mesma dimensão (por exemplo, datas anuais).
+
+Esses níveis garantem uma lógica no sistema e evitam resultados confusos e imprecisos que ameacem quais processos.
+
+## Dimensões, fatos e atributos em um Data Warehouse
+Para Rocha (2023) estão relacionados aos conceitos gerais dos bancos de dados relacionais, ou seja, ao modelo dimensional onde os dados aparecem em forma de tabelas.
+
+- Colunas = atributos = características dos dados => dimensão ou medição = representam fato.
+- Linhas = instâncias.
+
+Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* que são relacionados entre si.
+
+**Tabelas de fatos** são caracteriszadas por terem poucas colunas e muitas linhas com informações predominantemente numéricoas.
+
+**Tabelas de dimensões**  armazenam mais elementos textuais com detalhamento de informações que podem ter hierarquias.
+
+**Dimensões** atributos mais relacionados entre si que descrevem coisas organizadas. Pode ser conformada quando compartilhada com duas ou mais tabelas de fatos.
+
+**Tabela de fatos** relação entre diferentes dimensãom onde são armazenados dados numéricos que representam medidas específicas, permitindo análises multidimensionais.
+
+**Atributos** são campos das tabelas que descrevem características de aldo, como propriedades específicas permitindo a organização e análise detalhada de dados.
+
+**Fatos** são uma observação do mercado, normalmente com valor numérico.
+
+**Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipod e situação emq ue se busca guardar esses dados.
