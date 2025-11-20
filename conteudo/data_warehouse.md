@@ -72,3 +72,14 @@ Conforme Date (2004), Banco de dadosé um grande sistema computadorizado de info
 - **Banco de dados transacional**: é dependente no que se trata de sistemas de gerenciamento e gestão.
 
 ## Modelagem transacional
+
+Permite representar dados de forma simples, objetiva e com alto desempenho.
+
+É uma etapa de implementação de uma Data Warehouse e consolidam dimensões específicas para aumentar a eficácia e rapidez de consultas orgnaizadas.
+
+- **Dimensões regulares**: representam dados descritivos que geram contexto para os dados modeloados nas dimensões de medida. É desmembrado em grupos de informaões chamados níveis.
+- **Dimensões de medidas**: Dados quantitativos descritos por dimensões regulares. Conhecida em produtos OLAP - Online Analytical Processing (Processamento Analítico Online). Contém dados de fatos.
+- **Relações de escopo**: Entre dimensões de medida e regulares para definir o nível em que medidas estarão disponíveis para relatórios.
+
+Com maior quantidade de dados em escala sem precedentes, o valor dos dados também aumentou.
+
