@@ -2,7 +2,7 @@
 
 ## Banco de dados relacional
 - Criado em 1970 por Edgar Codd;
-- Objetivo de compatibilizar os códigos;
+- Objetivo de compatibilizar os códigos e dados;
 - Indenpendência dos dados aos programas;
 - Para superar redundâncias e inconsistências;
 - Forma simples e fácil de representar os dados e de fazer consultas difíceis;
@@ -51,9 +51,24 @@ Linguagens de programação:
 
 Perda da privacidade dos dados aumenta a conscientização da importância da Proteção de Dados.
 
-Torna-se cada vez mais desafiador respeitar a privacidade das pessaos
+Torna-se cada vez mais desafiador respeitar a privacidade das pessoas
 
 ## ETL
 - **Extract**: extrair
 - **Transform**: transformar
 - **Load**: carregar
+
+## Banco de dados transacional
+
+Conforme Date (2004), Banco de dadosé um grande sistema computadorizado de informações armazenadas, onde usuários podem realizar diferentes processos (inserir, buscar, excluir e alterar dados).
+
+- **Data Warehouse**: 
+    - trabalha de forma independente;
+    - ideal para pesquisas de grandes volumes;
+    - Não armazena dados atuais nem se atualiza em tempo eral e rápida;
+    - Realiza análises de dados;
+    - Centraliza dados de grnades empresas;
+
+- **Banco de dados transacional**: é dependente no que se trata de sistemas de gerenciamento e gestão.
+
+## Modelagem transacional
