@@ -198,7 +198,9 @@ Está relacionado à tecnpologia de cloud ou armazenamento em nuvem.
 É a primeira etapa.
 
 #### Extração de dados de fontes heterogêneas 
-Se dá quando se obtém dadpos de bancos de dados diferentes, destacando os principais objetivos e características dessa extração.
+Se dá quando se obtém dados de bancos de dados diferentes, destacando os principais objetivos e características dessa extração.
+
+Fontes de dados podem ser internas ou externas.
 
 Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
 - São analisadas em 3 dimensões: distribuição dos sistemas locais, heterogeneidade e autonomia dos sistemas locais.
@@ -274,13 +276,65 @@ As estratégias adotadas são:
 
 ### Carregamento (load)
 
-QOs dados são carregados em um sistema de destino que pode ser de forma completa ou nõa.
-
-O carregamento em um *Data Warehouse*, analisa-se sua ligação direta com estratégias convencionais: *Prepared Statements* e *Bulk Load*.
-
 É a última fase do processo.
+
+Os dados são carregados em um sistema de destino que pode ser de forma completa ou não.
+
+Caregar dados de forma estratégica pomove o ganho de tempo no processamento de dados, além de maior performance.
+
+O carregamento em um *Data Warehouse* pode seguir uma das estratégias
+
+- Estratégias convencionais: carrega de forma individual e sequencial logo após o tratamento deles. Ocorre em tempo real e de forma simples, em algumas etapas.
+- *Prepared Statements*: Otimiza o desempenho de carregamento de dados. São estratégias de repetição, por isso são mais eficientes e reutilizam muitos dados, ou
+- *Bulk Load*: é mais eficiente na inserção de muitos dados ao mesmo tmepo em um determinado sistema. Sua vantagem está na possibilidade paralela de desativar uma base de daods e ainda carregar registros.
+    - Utiliza uma fonte de dados simples, porém se limita ao fato de não permitir o tratamento de dados durante um processo.
+
+#### Considerações:
+**Integridade dos dados**: deve-se averiguar devidamente os campos, tabelas e dados.
+
+**Tipo de carga a ser realizada**: 
+- incremental: usual em tabelas de fatos.
+- total.: usual em tabelas de dimensão. 
+
+**Otimização de processo de carga**: responsável por agilizar o prtocesso por meio de ferramentas de organização de dados.
+
+**Suporte completo ao processo de carga**: avalia o antes e o depois do processo, bem como fases de eliminaçaõ e criação de índices dse necessário.
 
 #### Ferrramentas
 - Amazon Redshift
 - Google BigQuery (vídeo)
 - Microsoft Azure Synapse Analytics
+
+#### Autores
+- Área de etiquetagem e rastreio de fontes de daods em Big Data, por Costa (2019);
+- Área de vendas por Erba et al (2020);
+- Repartição territorial de desmatamentos, por Deus, Almeida e Carvalho (2021)
+
+## Data Marts e Implementação de Soluções Analíticas
+**Data Mart** é mais específico que **Data warehouse**, é menor e concentra-se apenas em um determinado assunto ou dado (Schaedler, 2021).
+
+É um subconjunto de Data warehouse, enquanto *Data warehouse* possui um grande repertório.
+
+*Data Mart* possui as seguintes vantagens:
+
+- Diminuição de custos de sistemas para empresas;
+- Escopos reduzidos em tamanho;
+- Maior apoio à tomada de decisões.
+
+Com a pandemia, foram gerados muitos dados devido à digitalização de serviços públicos e privados, aumentando a importância da preservação digital e dos registros digitais arquivísticos.
+
+### Tipos de Data Marts
+- **Dependente**: deriva diretamente de um DAta WArehouse.
+    - Possui vantagens como consistência de dados e oferta de dados com qualidade.
+    - Exige um alto custo.
+- **Independente**: é um pequeno data warehouse projetado de forma estratégica e mais pontual.
+
+Tem como aplicabilidade, para Silva e Silva (2018), a análise de preços de concorrentes, especialmente no e-commerce de material esportivo.
+
+- **Foco**: armazenam um único assunto que é descentralizado.
+
+- **Utilização**: é mais limitado que *data warehouse* e menos longa e complexa
+
+- **Abordagem de projeto**: já se conhecem os detalhes do projeto, melhor planejamento e adoção de escolhas mais eficientes, enquanto Data Warehouses é *top down*.
+
+## Projeto e implementação de Data Marts
