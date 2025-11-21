@@ -172,4 +172,34 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 
 **Fatos** são uma observação do mercado, normalmente com valor numérico.
 
-**Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipod e situação emq ue se busca guardar esses dados.
+**Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipo de situação emq ue se busca guardar esses dados.
+
+## ETL (*extract*, *transform* e *load*)
+É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
+
+É a principal etapa na construção, desenvolvimento e manutenção de um *Data Warehouse*.
+
+Por meio desta técnica os dados são otimizados para serem guardados.
+
+## Extração
+É a primeira etapa.
+
+### Extração de dados de fontes heterogêneas 
+Se dá quando se obtém dadpos de bancos de dados diferentes, destacando os principais objetivos e características dessa extração.
+
+Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
+- São analisadas em 3 dimensões: distribuição dos sistemas locais, heterogeneidade e autonomia dos sistemas locais.
+- É representado por nós, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
+- Os componentes podem ter esquema (Arquitetura) conceitual global, local ou auxiliar.
+
+
+## Transformação
+São técnicas de préprocessamento a limpeza, a agregação e a derivação. São essenciais  na engenharia de dados.
+
+- São abordados algoritmos e critérios.
+- São ajustadas as regras de qualidade de dados
+
+## Carga (load)
+O carregamento em um *Data Warehouse*, analisa-se sua ligação direta com estratégias convencionais: *Prepared Statements* e *Bulk Load*.
+
+É a última fase do processo
