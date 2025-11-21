@@ -103,7 +103,10 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo c9o
 - Composto por dois tipos de tabelas:
     - **Tabela de fatos** , no centro do esquema
     - **Tabela com dimensões**, ligada à tabela principal
-- Diretamente elacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias
+- Diretamente elacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias.
+
+## Considerações na escolha da modelagem
+- Público-alvo: é necessário uma modelagem para cada atender aos diversos tipos de usuário.
 
 ## Tipos de fatos
 - Fatos aditivos: Medidas de negócios podem ser agregadas em alguma dimensão;
@@ -181,16 +184,20 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 
 Por meio desta técnica os dados são otimizados para serem guardados.
 
+Essas etapas têm o objetivo de otimizar e armazenar informações escaláveis, bem como auxiliar nas tomadas de decisões nas organizações.
+
+Está relacionado à tecnpologia de cloud ou armazenamento em nuvem.
+
 ### Recomendações
 - Fazer um devido planejamento;
 - Automatizar etapas sempre que possível;
 - Monitorar e validar dados;
 - Garantir a segurança das informações.
 
-## Extração
+### Extração
 É a primeira etapa.
 
-### Extração de dados de fontes heterogêneas 
+#### Extração de dados de fontes heterogêneas 
 Se dá quando se obtém dadpos de bancos de dados diferentes, destacando os principais objetivos e características dessa extração.
 
 Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
@@ -198,13 +205,13 @@ Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados
 - É representado por nós, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
 - Os componentes podem ter esquema (Arquitetura) conceitual global, local ou auxiliar.
 
-### Estudiosos
+#### Estudiosos
 - Mapeamentos sistemáticos, por Almeida et al. (2020);
 - Migração entre bancos de dados, por Rodrigues e Vieira (2019);
 - Área da Saúde, por Cruz (2019);
 - Área acadêmida Dias e Carvalho-Segundo (2021)
 
-### SGBDH
+#### SGBDH
 Sistema de Gestão de Banco de Dados Heterogêneos.
 
 Também chamados de:
@@ -212,13 +219,13 @@ Também chamados de:
 - sistemas de múltiplos bancos de dados
 - multibase
 
-### Ferramentas
+#### Ferramentas
 - Apache Nifi
 - Talend
 - Informatica PowerCenter
 - Pentaho Data Integration
 
-## Transformação
+### Transformação
 São técnicas de préprocessamento a limpeza, a agregação e a derivação. São técnicas de pré-processamento de dados essenciais na engenharia de dados.
 
 Transformam em dados consistentes, deixando-os coerentes para análise.
@@ -234,7 +241,7 @@ Utiliza algoritmos que trabalham com números e vlaores nominais e, por diferent
 - Normalização;
 - Criação de novos atributos a partir de outros pré-existentes.
 
-### Limpeza
+#### Limpeza
 Visa eliminar problemas como:
 - registros incompletos;
 - valores errados;
@@ -242,14 +249,14 @@ Visa eliminar problemas como:
 
 As técnicas vão desde remoção de registro com problemas até aplicação de técnicas de agrupamento para auxiliar descoberta de melhores valores.
 
-### Integração de dados
+#### Integração de dados
 Com fontes heterogêneas (textos, planilhas, data warehouses, vídeos, imagens), surge a necessidade de integrar os dados em um repositório único sem redundâncias e denpendências entre variáveis/valores conflitantes.
 Exemplos:
 - categorias difernetes par aos mesmos valores
 - chaves divergentes
 - regras diferentes para os mesmos dados
 
-### Redução de dados
+#### Redução de dados
 Às vezes os volumes de dados são tão grandes que se torna impraticável o processo de análise e de mineiração.
 
 O processo é para redução da massa de dados sem perder a representatividade dos dados originais.
@@ -260,12 +267,12 @@ As estratégias adotadas são:
 - redução de dimensionalidade
 - discretização
 
-### Ferramentas
+#### Ferramentas
 - Apache Spark
 - Pentaho Data Integration
 - Microsoft SQL Server Integration Services (SSIS)
 
-## Carga (load)
+### Carregamento (load)
 
 QOs dados são carregados em um sistema de destino que pode ser de forma completa ou nõa.
 
@@ -273,7 +280,7 @@ O carregamento em um *Data Warehouse*, analisa-se sua ligação direta com estra
 
 É a última fase do processo.
 
-### Ferrramentas
+#### Ferrramentas
 - Amazon Redshift
 - Google BigQuery (vídeo)
 - Microsoft Azure Synapse Analytics
