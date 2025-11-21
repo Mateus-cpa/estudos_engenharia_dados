@@ -337,4 +337,28 @@ Tem como aplicabilidade, para Silva e Silva (2018), a análise de preços de con
 
 - **Abordagem de projeto**: já se conhecem os detalhes do projeto, melhor planejamento e adoção de escolhas mais eficientes, enquanto Data Warehouses é *top down*.
 
-## Projeto e implementação de Data Marts
+Está atrelado a pontos de análise, projeto conceitual, ETL e processo analítico. Os resultados geram indicadores que auxiliam os gestores nas tomadas de decisão.
+
+### Projeto e implementação de Data Marts
+Abordagens de implementação:
+- **Top-down**: modelo relacional e normalização. ETL de forma únida e integrada.
+- **Bottom-up**: baseada em um *Data Mart* independente. Implementação rápida e uma das principais vantagens. A Desvantagem é a dificuldade de administrar múltiplas equipes.
+- Abordagem de arquitetura BUS - incremental: combinação das abordagens anteriores.
+
+### Integração de Data Marts com Data Warehouse.
+Ambos possuem relação com os sistemas de informações (SI). Um serve de base para o outro. Data Mart é um setor do Data Warehouse, como a empresa e seus departamentos.
+
+Mesmo os dados independentes são relacionados entre si.
+
+O processo de ETL deve existir aninda que nõa seja obriga´torio existir ambos no **pipeline**.
+
+Integração só é necessário e importando devido à concorrência de consumidores nas empresas, provocando a necessidade de tomar decisões d emaneira mais precisas e rápidas.
+
+### Tipos (p67)
+- [**Integração organizacional**](https://www.astera.com/pt/type/blog/data-mart-vs-data-warehouse): Nesta abordagem, há uma conexão estruturada entre os data marts e o data warehouse, onde os data marts atendem às necessidades específicas de departamentos ou funções, enquanto o data warehouse fornece uma visão unificada da organização.
+- [**Integração através de ferramentas**](https://beanalytic.com.br/blog/big-data-e-data-warehouse/): Utiliza ferramentas de tecnologia que facilitam a conexão e sincronização entre os data marts e o data warehouse, como plataformas de ETL (Extract, Transform, Load) e de virtualização de dados, garantindo o fluxo contínuo de informações;
+- [**Transferência de dados**]( https://ezly.com.br/integracao-de-dados/): Consiste na movimentação de dados entre data marts e data warehouse, podendo ocorrer por replicação, extração ou carregamento de dados, seja de forma síncrona ou assíncrona para manter os dados atualizados.
+- [**Base de dados comum**]( https://www.datacamp.com/pt/blog/data-integration): Refere-se ao uso de uma base de dados centralizada ou um repositório comum que serve de fonte de verdade para tanto os data warehouse quanto os data marts, promovendo consistência e governança.
+- [**Integração de programas**]( http://www.fatecead.com.br/tei/semana08-1_bi_cap02.pdf): Envolve a conexão de sistemas e aplicações específicas, permitindo que dados ao nível de programas ou plataformas sejam compartilhados ou sincronizados com o data warehouse e seus data marts, facilitando análises multidimensionais e relatórios integrados.
+
+*Data Marts* tem como objetivo afunilar as características do Data WArehouse e identificar indicadores e sua evolução ao longo do tempo.
