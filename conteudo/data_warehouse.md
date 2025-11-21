@@ -181,6 +181,12 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 
 Por meio desta técnica os dados são otimizados para serem guardados.
 
+### Recomendações
+- Fazer um devido planejamento;
+- Automatizar etapas sempre que possível;
+- Monitorar e validar dados;
+- Garantir a segurança das informações.
+
 ## Extração
 É a primeira etapa.
 
@@ -192,14 +198,82 @@ Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados
 - É representado por nós, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
 - Os componentes podem ter esquema (Arquitetura) conceitual global, local ou auxiliar.
 
+### Estudiosos
+- Mapeamentos sistemáticos, por Almeida et al. (2020);
+- Migração entre bancos de dados, por Rodrigues e Vieira (2019);
+- Área da Saúde, por Cruz (2019);
+- Área acadêmida Dias e Carvalho-Segundo (2021)
+
+### SGBDH
+Sistema de Gestão de Banco de Dados Heterogêneos.
+
+Também chamados de:
+- bancos de dados federados
+- sistemas de múltiplos bancos de dados
+- multibase
+
+### Ferramentas
+- Apache Nifi
+- Talend
+- Informatica PowerCenter
+- Pentaho Data Integration
 
 ## Transformação
-São técnicas de préprocessamento a limpeza, a agregação e a derivação. São essenciais  na engenharia de dados.
+São técnicas de préprocessamento a limpeza, a agregação e a derivação. São técnicas de pré-processamento de dados essenciais na engenharia de dados.
+
+Transformam em dados consistentes, deixando-os coerentes para análise.
 
 - São abordados algoritmos e critérios.
 - São ajustadas as regras de qualidade de dados
 
+Utiliza algoritmos que trabalham com números e vlaores nominais e, por diferentes tipos de critérios e técnicas empregadas:
+
+- Suavização;
+- Agrupamento;
+- Generalização;
+- Normalização;
+- Criação de novos atributos a partir de outros pré-existentes.
+
+### Limpeza
+Visa eliminar problemas como:
+- registros incompletos;
+- valores errados;
+- dados inconsistentes.
+
+As técnicas vão desde remoção de registro com problemas até aplicação de técnicas de agrupamento para auxiliar descoberta de melhores valores.
+
+### Integração de dados
+Com fontes heterogêneas (textos, planilhas, data warehouses, vídeos, imagens), surge a necessidade de integrar os dados em um repositório único sem redundâncias e denpendências entre variáveis/valores conflitantes.
+Exemplos:
+- categorias difernetes par aos mesmos valores
+- chaves divergentes
+- regras diferentes para os mesmos dados
+
+### Redução de dados
+Às vezes os volumes de dados são tão grandes que se torna impraticável o processo de análise e de mineiração.
+
+O processo é para redução da massa de dados sem perder a representatividade dos dados originais.
+
+As estratégias adotadas são:
+- a criação de estruturas otimizadas para os dados, 
+- a seleção de um subconjunto dos atributos
+- redução de dimensionalidade
+- discretização
+
+### Ferramentas
+- Apache Spark
+- Pentaho Data Integration
+- Microsoft SQL Server Integration Services (SSIS)
+
 ## Carga (load)
+
+QOs dados são carregados em um sistema de destino que pode ser de forma completa ou nõa.
+
 O carregamento em um *Data Warehouse*, analisa-se sua ligação direta com estratégias convencionais: *Prepared Statements* e *Bulk Load*.
 
-É a última fase do processo
+É a última fase do processo.
+
+### Ferrramentas
+- Amazon Redshift
+- Google BigQuery (vídeo)
+- Microsoft Azure Synapse Analytics
