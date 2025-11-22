@@ -30,9 +30,9 @@
     - Tem relação com os esquemas.
 
 ## Arquitetura de Sistemas
-Sistemas de informações é uma ciência que estuda a coleta, armazenament9o, processamento, análise e distribuição de dados por meio de tecnologias como softwares, hardwares, banco de dados, sistemas especialistas, sistemas de apoio à gestão.
+Sistemas de informações é uma ciência que estuda a coleta, armazenamento, processamento, análise e distribuição de dados por meio de tecnologias como softwares, hardwares, banco de dados, sistemas especialistas, sistemas de apoio à gestão.
 
-Deve conter relevância, intetgração, fluxo independente, controle e diretrizes adequadas.
+Deve conter relevância, integração, fluxo independente, controle e diretrizes adequadas.
 
 ## Business Intelligence
 O sistema de arquitetura de BI pode estar relacionado com dados, bases, documentos, indicadores, informações.
@@ -44,14 +44,14 @@ O sistema de arquitetura de BI pode estar relacionado com dados, bases, document
 ## Data warehouse
 É um sistema de armazenamento de dados que tem por objetivo auxiliar nas tomadas de decisões.
 
-Linguagens de programação:
+Principais linguagens de programação:
 - Python
 - SQL
 - Java
 
 Perda da privacidade dos dados aumenta a conscientização da importância da Proteção de Dados.
 
-Torna-se cada vez mais desafiador respeitar a privacidade das pessoas
+Torna-se cada vez mais desafiador respeitar a privacidade das pessoas.
 
 ## ETL
 - **Extract**: extrair
@@ -60,25 +60,25 @@ Torna-se cada vez mais desafiador respeitar a privacidade das pessoas
 
 ## Banco de dados transacional
 
-Conforme Date (2004), Banco de dadosé um grande sistema computadorizado de informações armazenadas, onde usuários podem realizar diferentes processos (inserir, buscar, excluir e alterar dados).
+Conforme Date (2004), Banco de dados é um grande sistema computadorizado de informações armazenadas, onde usuários podem realizar diferentes processos (inserir, buscar, excluir e alterar dados).
 
 - **Data Warehouse**: 
     - trabalha de forma independente;
     - ideal para pesquisas de grandes volumes;
-    - Não armazena dados atuais nem se atualiza em tempo eral e rápida;
+    - Não armazena dados atuais nem se atualiza em tempo real e rápida;
     - Realiza análises de dados;
-    - Centraliza dados de grnades empresas;
+    - Centraliza dados de grandes empresas;
 
 - **Banco de dados transacional**: é dependente no que se trata de sistemas de gerenciamento e gestão.
 
 ## Modelagem transacional
 
-Técnica de representar dados de forma simples, objetiva e com alto desempenho. Além de compreensível
+Técnica de representar dados de forma simples, objetiva e com alto desempenho, além de compreensível.
 
-É uma etapa de implementação de uma Data Warehouse e consolidam dimensões específicas para aumentar a eficácia e rapidez de consultas orgnaizadas.
+É uma etapa de implementação de uma Data Warehouse e consolidam dimensões específicas para aumentar a eficácia e rapidez de consultas organizadas.
 
-- **Dimensões regulares**: representam dados descritivos que geram contexto para os dados modeloados nas dimensões de medida. É desmembrado em grupos de informaões chamados níveis.
-- **Dimensões de medidas**: Dados quantitativos descritos por dimensões regulares. Conhecida em produtos OLAP - Online Analytical Processing (Processamento Analítico Online). Contém dados de fatos.
+- **Dimensões regulares**: representam dados descritivos que geram contexto para os dados modelados nas dimensões de medida. É desmembrado em grupos de informações chamados **níveis**.
+- **Dimensões de medidas**: Dados quantitativos descritos por dimensões regulares. Conhecida em produtos OLAP - Online Analytical Processing (Processamento Analítico Online). Contém dados de <mark>fatos</mark>.
 - **Relações de escopo**: Entre dimensões de medida e regulares para definir o nível em que medidas estarão disponíveis para relatórios.
 
 Com maior quantidade de dados em escala sem precedentes, o valor dos dados também aumentou.
@@ -87,14 +87,14 @@ Com maior quantidade de dados em escala sem precedentes, o valor dos dados tamb�
 
 Ambos são multidimensionais.
 
-Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo c9om a disponibilidade de disco e o poder de processamento computacional.
+Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com a disponibilidade de disco e o poder de processamento computacional.
 
 ### Técnicas de design de esquema Floco de neve
 
-- Modelagem com as dimensões da stabelas normalizadas e divididas em hierarquia
-- Menor ocupação do banco de dados
-- Melhor desempenho
-- Inexistência de redundância
+- Modelagem com as dimensões da stabelas normalizadas e divididas em hierarquia;
+- Menor ocupação do banco de dados;
+- Melhor desempenho;
+- Inexistência de redundância.
 
 ### Técnicas de design de esquema Estrela
 
@@ -103,7 +103,7 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo c9o
 - Composto por dois tipos de tabelas:
     - **Tabela de fatos** , no centro do esquema
     - **Tabela com dimensões**, ligada à tabela principal
-- Diretamente elacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias.
+- Diretamente relacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias.
 
 ## Considerações na escolha da modelagem
 - Público-alvo: é necessário uma modelagem para cada atender aos diversos tipos de usuário.
