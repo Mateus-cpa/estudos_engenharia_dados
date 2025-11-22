@@ -147,19 +147,19 @@ Hierarquia é a relação entre as dimensões e os atributos de uma determinada 
 
 Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabelas com bancos de dados.
 
-Os dados são disposrtos dos níveis mais detalhados para os menos detalhados.
+Os dados são dispostos dos níveis <mark>mais detalhados para os menos detalhados.
 
 ##  Níveis de granularidade em modelos dimensionais
 
-Se referem a informações armazenadas em tabeelas, que devem possuir a mesma dimensão (por exemplo, datas anuais).
+Se referem a informações armazenadas em taeelas, que devem possuir a mesma dimensão (por exemplo, datas anuais).
 
 Esses níveis garantem uma lógica no sistema e evitam resultados confusos e imprecisos que ameacem quais processos.
 
 ## Dimensões, fatos e atributos em um Data Warehouse
-Para Rocha (2023) estão relacionados aos conceitos gerais dos bancos de dados relacionais, ou seja, ao modelo dimensional onde os dados aparecem em forma de tabelas.
+Para Rocha (2023) Data Warehouses estão relacionados aos conceitos gerais dos bancos de dados relacionais, ou seja, ao modelo dimensional onde os dados aparecem em forma de tabelas.
 
-- Colunas = atributos = características dos dados => dimensão ou medição = representam fato.
-- Linhas = instâncias.
+- **Colunas** = atributos = características dos dados => dimensão ou medição = representam fatos.
+- **Linhas** = instâncias.
 
 Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* que são relacionados entre si.
 
@@ -169,16 +169,16 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 
 **Dimensões** atributos mais relacionados entre si que descrevem coisas organizadas. Pode ser conformada quando compartilhada com duas ou mais tabelas de fatos.
 
-**Tabela de fatos** relação entre diferentes dimensãom onde são armazenados dados numéricos que representam medidas específicas, permitindo análises multidimensionais.
+**Tabela de fatos** relação entre diferentes dimensão, onde são armazenados dados numéricos que representam medidas específicas, permitindo análises multidimensionais.
 
-**Atributos** são campos das tabelas que descrevem características de aldo, como propriedades específicas permitindo a organização e análise detalhada de dados.
+**Atributos** são campos das tabelas que descrevem características de algo, como propriedades específicas permitindo a organização e análise detalhada de dados.
 
 **Fatos** são uma observação do mercado, normalmente com valor numérico.
 
-**Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipo de situação emq ue se busca guardar esses dados.
+**Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipo de situação em que se busca guardar esses dados.
 
 ## ETL (*extract*, *transform* e *load*)
-É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
+<mark>É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
 
 É a principal etapa na construção, desenvolvimento e manutenção de um *Data Warehouse*.
 
@@ -186,7 +186,7 @@ Por meio desta técnica os dados são otimizados para serem guardados.
 
 Essas etapas têm o objetivo de otimizar e armazenar informações escaláveis, bem como auxiliar nas tomadas de decisões nas organizações.
 
-Está relacionado à tecnpologia de cloud ou armazenamento em nuvem.
+Está relacionado à tecnologia de cloud ou armazenamento em nuvem.
 
 ### Recomendações
 - Fazer um devido planejamento;
