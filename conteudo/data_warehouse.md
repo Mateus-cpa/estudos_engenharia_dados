@@ -11,7 +11,7 @@
     - **IMB** compactou drasticamento os dados de programação, possibilitando otimização do tempo;
     - **Microsoft** criou interfaces gráficas bidimensionais chamadas *Windows*;
     - **Sybase** ganhou evidência devido à sua robustez e qualidade técnica;
-    - **Oracle** se destacou na área de bnaco de dados por apresentar fatores como desempenho, confiabilidade e segurança.
+    - **Oracle** se destacou na área de banco de dados por apresentar fatores como desempenho, confiabilidade e segurança.
 
 ## Representação de dados
 - Relações entre linhas que consiste em um esquema e uma instância;
@@ -27,7 +27,7 @@
     - Compõe a relação em um dado momento;
 - *Banco de dados relacional* é:
     - Conjunto de relações com nomenclaturas diferentes;
-    - Tem relação com os esquemas
+    - Tem relação com os esquemas.
 
 ## Arquitetura de Sistemas
 Sistemas de informações é uma ciência que estuda a coleta, armazenament9o, processamento, análise e distribuição de dados por meio de tecnologias como softwares, hardwares, banco de dados, sistemas especialistas, sistemas de apoio à gestão.
