@@ -325,8 +325,8 @@ O carregamento em um *Data Warehouse* pode seguir uma das estratégias:
 Com a pandemia, foram gerados muitos dados devido à digitalização de serviços públicos e privados, aumentando a importância da preservação digital e dos registros digitais arquivísticos.
 
 ### Tipos de Data Marts
-- **Dependente**: deriva diretamente de um DAta WArehouse.
-    - Possui vantagens como consistência de dados e oferta de dados com qualidade.
+- **Dependente**: deriva diretamente de um Data WArehouse.
+    - Possui vantagens como consistência de dados e oferta de dados com qualidade;
     - Exige um alto custo.
 - **Independente**: é um pequeno data warehouse projetado de forma estratégica e mais pontual.
 
@@ -334,7 +334,7 @@ Tem como aplicabilidade, para Silva e Silva (2018), a análise de preços de con
 
 - **Foco**: armazenam um único assunto que é descentralizado.
 
-- **Utilização**: é mais limitado que *data warehouse* e menos longa e complexa
+- **Utilização**: é mais limitado que *data warehouse* e menos longa e complexa.
 
 - **Abordagem de projeto**: já se conhecem os detalhes do projeto, melhor planejamento e adoção de escolhas mais eficientes, enquanto Data Warehouses é *top down*.
 
@@ -343,17 +343,17 @@ Está atrelado a pontos de análise, projeto conceitual, ETL e processo analíti
 ### Projeto e implementação de Data Marts
 Abordagens de implementação:
 - **Top-down**: modelo relacional e normalização. ETL de forma únida e integrada.
-- **Bottom-up**: baseada em um *Data Mart* independente. Implementação rápida e uma das principais vantagens. A Desvantagem é a dificuldade de administrar múltiplas equipes.
+- **Bottom-up**: baseada em um *Data Mart* independente. Implementação rápida e uma das principais vantagens. A desvantagem é a dificuldade de administrar múltiplas equipes.
 - Abordagem de arquitetura BUS - incremental: combinação das abordagens anteriores.
 
 ### Integração de Data Marts com Data Warehouse.
-Ambos possuem relação com os sistemas de informações (SI). Um serve de base para o outro. Data Mart é um setor do Data Warehouse, como a empresa e seus departamentos.
+Ambos possuem relação com os sistemas de informações (SI). Um serve de base para o outro. *Data Mart* é um setor do Data Warehouse, como a empresa e seus departamentos.
 
 Mesmo os dados independentes são relacionados entre si.
 
-O processo de ETL deve existir aninda que nõa seja obriga´torio existir ambos no **pipeline**.
+O processo de ETL deve existir ainda que não seja obrigatório existir ambos no **pipeline**.
 
-Integração só é necessário e importando devido à concorrência de consumidores nas empresas, provocando a necessidade de tomar decisões d emaneira mais precisas e rápidas.
+Integração só é necessário e importando devido à concorrência de consumidores nas empresas, provocando a necessidade de tomar decisões de maneira mais precisas e rápidas.
 
 ### Tipos (p67)
 - [**Integração organizacional**](https://www.astera.com/pt/type/blog/data-mart-vs-data-warehouse): Nesta abordagem, há uma conexão estruturada entre os data marts e o data warehouse, onde os data marts atendem às necessidades específicas de departamentos ou funções, enquanto o data warehouse fornece uma visão unificada da organização.
