@@ -109,14 +109,14 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 - Público-alvo: é necessário uma modelagem para cada atender aos diversos tipos de usuário.
 
 ## Tipos de fatos
-- Fatos aditivos: Medidas de negócios podem ser agregadas em alguma dimensão;
-- Fatos semi-aditivos: podem ser agregados apenas em algumas dimensões;
-- Fatos não aditivos: não podem ser agregados em qualquer dimensão
+- **Fatos aditivos**: Medidas de negócios podem ser agregadas em alguma dimensão;
+- **Fatos semi-aditivos**: podem ser agregados apenas em algumas dimensões;
+- **Fatos não aditivos**: não podem ser agregados em qualquer dimensão
 
 ## Tipos de chaves nas tabelas dimensionais
-- Primárias: identifica registros exclusivos;
-- Substitutivas: será a chave primária para dimensões que mudam lentamente;
-- Estrangieras: unem duas tabelas. Geralmente:
+- **Primárias**: identifica registros exclusivos;
+- **Substitutivas**: será a chave primária para dimensões que <mark>mudam lentamente</mark>;
+- **Estrangeiras**: unem duas tabelas. Geralmente:
     - Unem de fatos e de dimensões;
     - na tabela de fatos, sendo a chave primária na tabela de dimensão;
 
@@ -128,11 +128,11 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 
 ## Etapas de projeto de um modelo dimensional
 
-- Identificação de processos de negócios
-- Identificação de fatos e dimensões em seu modelo de dados dimensionais
-- Identificação dos atributos para dimensões
-- Definição da granularidade dos fatos comerciais
-- Armazenamento de informações históricas (dimensões que modam lentamente)
+- Identificação de processos de negócios;
+- Identificação de fatos e dimensões em seu modelo de dados dimensionais;
+- Identificação dos atributos para dimensões;
+- Definição da granularidade dos fatos comerciais;
+- Armazenamento de informações históricas (dimensões que mudam lentamente).
 
 ## Benefícios da modelagem dimensional
 
@@ -145,7 +145,7 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 ## Hierarquia de modelos dimensionais
 Hierarquia é a relação entre as dimensões e os atributos de uma determinada informação.
 
-Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabwlas com bancos de dados.
+Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabelas com bancos de dados.
 
 Os dados são disposrtos dos níveis mais detalhados para os menos detalhados.
 
