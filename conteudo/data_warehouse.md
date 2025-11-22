@@ -202,9 +202,9 @@ Se dá quando se obtém dados de bancos de dados diferentes, destacando os princ
 
 Fontes de dados podem ser internas ou externas.
 
-Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
+Visa a preservar os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
 - São analisadas em 3 dimensões: distribuição dos sistemas locais, heterogeneidade e autonomia dos sistemas locais.
-- É representado por nós, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
+- É representado por <mark>nós</mark>, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
 - Os componentes podem ter esquema (Arquitetura) conceitual global, local ou auxiliar.
 
 #### Estudiosos
@@ -217,9 +217,9 @@ Visa a preserver os sistemas existentes e manter a autonomia dos bancos de dados
 Sistema de Gestão de Banco de Dados Heterogêneos.
 
 Também chamados de:
-- bancos de dados federados
-- sistemas de múltiplos bancos de dados
-- multibase
+- bancos de dados federados;
+- sistemas de múltiplos bancos de dados;
+- multibase.
 
 #### Ferramentas
 - Apache Nifi
