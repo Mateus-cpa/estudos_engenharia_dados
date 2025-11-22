@@ -283,7 +283,7 @@ Os dados são carregados em um sistema de destino que pode ser de forma completa
 
 Caregar dados de forma estratégica pomove o ganho de tempo no processamento de dados, além de maior performance.
 
-O carregamento em um *Data Warehouse* pode seguir uma das estratégias
+O carregamento em um *Data Warehouse* pode seguir uma das estratégias:
 
 - Estratégias convencionais: carrega de forma individual e sequencial logo após o tratamento deles. Ocorre em tempo real e de forma simples, em algumas etapas.
 - *Prepared Statements*: Otimiza o desempenho de carregamento de dados. São estratégias de repetição, por isso são mais eficientes e reutilizam muitos dados, ou
@@ -297,19 +297,19 @@ O carregamento em um *Data Warehouse* pode seguir uma das estratégias
 - incremental: usual em tabelas de fatos.
 - total.: usual em tabelas de dimensão. 
 
-**Otimização de processo de carga**: responsável por agilizar o prtocesso por meio de ferramentas de organização de dados.
+**Otimização de processo de carga**: responsável por agilizar o processo por meio de ferramentas de organização de dados.
 
-**Suporte completo ao processo de carga**: avalia o antes e o depois do processo, bem como fases de eliminaçaõ e criação de índices dse necessário.
+**Suporte completo ao processo de carga**: avalia o antes e o depois do processo, bem como fases de eliminação e criação de índices dse necessário.
 
-#### Ferrramentas
+#### Ferramentas
 - Amazon Redshift
 - Google BigQuery (vídeo)
 - Microsoft Azure Synapse Analytics
 
 #### Autores
-- Área de etiquetagem e rastreio de fontes de daods em Big Data, por Costa (2019);
+- Área de etiquetagem e rastreio de fontes de dados em Big Data, por Costa (2019);
 - Área de vendas por Erba et al (2020);
-- Repartição territorial de desmatamentos, por Deus, Almeida e Carvalho (2021)
+- Repartição territorial de desmatamentos, por Deus, Almeida e Carvalho (2021).
 
 ## Data Marts e Implementação de Soluções Analíticas
 **Data Mart** é mais específico que **Data warehouse**, é menor e concentra-se apenas em um determinado assunto ou dado (Schaedler, 2021).
