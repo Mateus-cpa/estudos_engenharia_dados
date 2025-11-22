@@ -235,7 +235,7 @@ Transformam em dados consistentes, deixando-os coerentes para análise.
 - São abordados algoritmos e critérios.
 - São ajustadas as regras de qualidade de dados
 
-Utiliza algoritmos que trabalham com números e vlaores nominais e, por diferentes tipos de critérios e técnicas empregadas:
+Utiliza algoritmos que trabalham com números e valores nominais e, por diferentes tipos de critérios e técnicas empregadas:
 
 - Suavização;
 - Agrupamento;
@@ -252,22 +252,23 @@ Visa eliminar problemas como:
 As técnicas vão desde remoção de registro com problemas até aplicação de técnicas de agrupamento para auxiliar descoberta de melhores valores.
 
 #### Integração de dados
-Com fontes heterogêneas (textos, planilhas, data warehouses, vídeos, imagens), surge a necessidade de integrar os dados em um repositório único sem redundâncias e denpendências entre variáveis/valores conflitantes.
+Com fontes heterogêneas (textos, planilhas, data warehouses, vídeos, imagens), surge a necessidade de integrar os dados em um repositório único sem redundâncias e dependências entre variáveis/valores conflitantes.
+
 Exemplos:
-- categorias difernetes par aos mesmos valores
-- chaves divergentes
-- regras diferentes para os mesmos dados
+- categorias difernetes par aos mesmos valores;
+- chaves divergentes;
+- regras diferentes para os mesmos dados.
 
 #### Redução de dados
-Às vezes os volumes de dados são tão grandes que se torna impraticável o processo de análise e de mineiração.
+Às vezes os volumes de dados são tão <mark>grandes</mark> que se torna impraticável o processo de análise e de mineiração.
 
 O processo é para redução da massa de dados sem perder a representatividade dos dados originais.
 
 As estratégias adotadas são:
-- a criação de estruturas otimizadas para os dados, 
-- a seleção de um subconjunto dos atributos
-- redução de dimensionalidade
-- discretização
+- a criação de estruturas otimizadas para os dados,;
+- a seleção de um subconjunto dos atributos;
+- redução de dimensionalidade;
+- discretização.
 
 #### Ferramentas
 - Apache Spark
