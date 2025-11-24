@@ -223,6 +223,8 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 ## ETL (*extract*, *transform* e *load*)
 > É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
 
+> O processo ETL envolve as etapas de extração, transformação e carregamento de dados.
+
 É a principal etapa na construção, desenvolvimento e manutenção de um *Data Warehouse*.
 
 > O processo ETL possui também a etapa de transformação e limpeza que são opcionais no Data Warehouse.
@@ -267,6 +269,10 @@ Visa a preservar os sistemas existentes e manter a autonomia dos bancos de dados
 #### SGBDH
 Sistema de Gestão de Banco de Dados Heterogêneos.
 
+> Para manipular dados de fontes heterogêneas é necessária uma camada de software chamada de Sistema de Gerência de Bancos de Dados Heterogêneos.
+
+> Um Sistema de Gerência de Bancos de Dados Heterogêneos também pode ser chamado de sistemas de bancos de dados federados.
+
 Também chamados de:
 - bancos de dados federados;
 - sistemas de múltiplos bancos de dados;
@@ -295,6 +301,8 @@ Utiliza algoritmos que trabalham com números e valores nominais e, por diferent
 - Criação de novos atributos a partir de outros pré-existentes.
 
 > Alguns algoritmos trabalham apenas com valores numéricos.
+
+> a transformação de dados, incluindo limpeza, agregação e derivação são técnicas de pré-processamento de dados.
 
 
 #### Limpeza
