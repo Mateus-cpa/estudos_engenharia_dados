@@ -221,9 +221,11 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 **Banco de dados** é um local de armazenamento de informações que variam de acordo com cada tipo de situação em que se busca guardar esses dados.
 
 ## ETL (*extract*, *transform* e *load*)
-<mark>É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
+> É uma ferramenta que identifica dados, os reúne, os traduz e os carrega até uma base de dados.
 
 É a principal etapa na construção, desenvolvimento e manutenção de um *Data Warehouse*.
+
+> O processo ETL possui também a etapa de transformação e limpeza que são opcionais no Data Warehouse.
 
 Por meio desta técnica os dados são otimizados para serem guardados.
 
@@ -240,15 +242,21 @@ Está relacionado à tecnologia de cloud ou armazenamento em nuvem.
 ### Extração
 É a primeira etapa.
 
+> Na fase de transformação, no ETL, são ajustadas as regras de qualidade de dados.
+
+
 #### Extração de dados de fontes heterogêneas 
-Se dá quando se obtém dados de bancos de dados diferentes, destacando os principais objetivos e características dessa extração.
+
+> A extração de dados de fontes heterogêneas está relacionada com a retirada de informações de bancos de dados diferentes.
+
+Destacam-se os principais objetivos e características dessa extração.
 
 Fontes de dados podem ser internas ou externas.
 
 Visa a preservar os sistemas existentes e manter a autonomia dos bancos de dados (dentre outros). Citam-se as principais características:
 - São analisadas em 3 dimensões: distribuição dos sistemas locais, heterogeneidade e autonomia dos sistemas locais.
-- É representado por <mark>nós</mark>, cada um podendo contar 1 ou mais bancos de dados locais, ligados por redes.
 - Os componentes podem ter esquema (Arquitetura) conceitual global, local ou auxiliar.
+> A extração de dados heterogêneos é representada por <mark>nós</mark>, sendo que cada nó pode conter um ou mais banco de dados locais e todos ligados por redes.
 
 #### Estudiosos
 - Mapeamentos sistemáticos, por Almeida et al. (2020);
@@ -285,6 +293,9 @@ Utiliza algoritmos que trabalham com números e valores nominais e, por diferent
 - Generalização;
 - Normalização;
 - Criação de novos atributos a partir de outros pré-existentes.
+
+> Alguns algoritmos trabalham apenas com valores numéricos.
+
 
 #### Limpeza
 Visa eliminar problemas como:
@@ -324,7 +335,7 @@ As estratégias adotadas são:
 
 Os dados são carregados em um sistema de destino que pode ser de forma completa ou não.
 
-Caregar dados de forma estratégica pomove o ganho de tempo no processamento de dados, além de maior performance.
+> Carregar dados em um *Data Warehouse* de forma estratégica promove ganho de tempo no processamento de dados
 
 O carregamento em um *Data Warehouse* pode seguir uma das estratégias:
 
@@ -335,6 +346,9 @@ O carregamento em um *Data Warehouse* pode seguir uma das estratégias:
 
 #### Considerações:
 **Integridade dos dados**: deve-se averiguar devidamente os campos, tabelas e dados.
+
+> Na etapa de carregamento de dados deve-se levar em conta a integridade dos dados.
+
 
 **Tipo de carga a ser realizada**: 
 - incremental: usual em tabelas de fatos.
