@@ -1,6 +1,6 @@
 # Arquitetura de Data Warehouse e Data Marts
 
-## Banco de dados relacional
+## História do Banco de dados relacional
 - Criado em 1970 por Edgar Codd;
 - Objetivo de compatibilizar os códigos e dados;
 - Indenpendência dos dados aos programas;
@@ -12,6 +12,8 @@
     - **Microsoft** criou interfaces gráficas bidimensionais chamadas *Windows*;
     - **Sybase** ganhou evidência devido à sua robustez e qualidade técnica;
     - **Oracle** se destacou na área de banco de dados por apresentar fatores como desempenho, confiabilidade e segurança.
+
+> O banco de dados relacional, área muito relevante na engenharia de dados, foi criado por Edgar Codd.
 
 ## Representação de dados
 - Relações entre linhas que consiste em um esquema e uma instância;
@@ -38,6 +40,9 @@ Deve conter relevância, integração, fluxo independente, controle e diretrizes
 O sistema de arquitetura de BI pode estar relacionado com dados, bases, documentos, indicadores, informações.
 
 É um conjunto de elementos que que tem o objetivo de apoiar as tomadas de decisões em serviços utilizando dados, informações e conhecimentos.
+
+> A arquitetura de Business Intelligence ajuda muito na tomada de decisões dentro de uma empresa.
+
 
 É usual em diferentes áreas.
 
@@ -81,6 +86,8 @@ Técnica de representar dados de forma simples, objetiva e com alto desempenho, 
 - **Dimensões de medidas**: Dados quantitativos descritos por dimensões regulares. Conhecida em produtos OLAP - Online Analytical Processing (Processamento Analítico Online). Contém dados de <mark>fatos</mark>.
 - **Relações de escopo**: Entre dimensões de medida e regulares para definir o nível em que medidas estarão disponíveis para relatórios.
 
+> Relações de escopo existem apenas entre dimensões de medida e regulares para definir o nível em que as medidas estarão disponíveis para os relatórios.
+
 Com maior quantidade de dados em escala sem precedentes, o valor dos dados também aumentou.
 
 ### Técnicas de design de esquema Floco de neve e Estrela
@@ -89,20 +96,27 @@ Ambos são multidimensionais.
 
 Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com a disponibilidade de disco e o poder de processamento computacional.
 
+> As técnicas de design de esquemas estrela e floco de neve são usuais em um Data Warehouse e são baseadas em padrões de modelagem.
+
 ### Técnicas de design de esquema Floco de neve
 
-- Modelagem com as dimensões da stabelas normalizadas e divididas em hierarquia;
+- Modelagem com as dimensões das tabelas normalizadas e divididas em hierarquia;
 - Menor ocupação do banco de dados;
 - Melhor desempenho;
 - Inexistência de redundância.
 
+> O esquema floco de neve é mais complexo do que o esquema estrela.
+
+> No modelo floco de neve não ocorrem ligações entre as dimensões
+
 ### Técnicas de design de esquema Estrela
 
-- Mais complexo
 - Mais comum
 - Composto por dois tipos de tabelas:
     - **Tabela de fatos** , no centro do esquema
     - **Tabela com dimensões**, ligada à tabela principal
+> As tabelas de fato e de dimensão são normalmente combinadas num esquema em estrela.
+
 - Diretamente relacionado com medidas, chaves primárias (PK), chaves estrangeiras (FK), atributos e hierarquias.
 
 ## Considerações na escolha da modelagem
@@ -145,15 +159,21 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 ## Hierarquia de modelos dimensionais
 Hierarquia é a relação entre as dimensões e os atributos de uma determinada informação.
 
-Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabelas com bancos de dados.
+> Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabelas com bancos de dados.
 
 Os dados são dispostos dos níveis <mark>mais detalhados para os menos detalhados.
 
+> As hierarquias podem ser adaptadas para a realidade de cada empresa que as utiliza.
+
 ##  Níveis de granularidade em modelos dimensionais
 
-Se referem a informações armazenadas em taeelas, que devem possuir a mesma dimensão (por exemplo, datas anuais).
+Se referem a informações armazenadas em tabelas.
+> Os níveis de granularidade em modelos dimensionais se referem a informações armazenadas em tabelas e devem possuir mesma dimensão. (por exemplo, datas anuais)
 
-Esses níveis garantem uma lógica no sistema e evitam resultados confusos e imprecisos que ameacem quais processos.
+>  As hierarquias e níveis de granularidade em modelos dimensionais são assuntos muito importantes para se entender dentro de engenharia de dados.
+
+> Os níveis de granularidade garantem uma lógica no sistema e evitam resultados confusos e imprecisos que ameacem quaisquer processos.
+
 
 ## Dimensões, fatos e atributos em um Data Warehouse
 Para Rocha (2023) Data Warehouses estão relacionados aos conceitos gerais dos bancos de dados relacionais, ou seja, ao modelo dimensional onde os dados aparecem em forma de tabelas.
@@ -315,6 +335,8 @@ O carregamento em um *Data Warehouse* pode seguir uma das estratégias:
 **Data Mart** é mais específico que **Data warehouse**, é menor e concentra-se apenas em um determinado assunto ou dado (Schaedler, 2021).
 
 É um subconjunto de Data warehouse, enquanto *Data warehouse* possui um grande repertório.
+
+> *Data Warehouse* é um sistema de armazenamento de dados e está baseado na flexibilidade de organizar, modificar e analisar dados conforme for a necessidade.
 
 *Data Mart* possui as seguintes vantagens:
 
