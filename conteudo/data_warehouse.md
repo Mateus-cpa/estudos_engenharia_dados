@@ -3,17 +3,25 @@
 ## História do Banco de dados relacional
 - Criado em 1970 por Edgar Codd;
 - Objetivo de compatibilizar os códigos e dados;
-- Indenpendência dos dados aos programas;
+- Independência dos dados aos programas;
 - Para superar redundâncias e inconsistências;
 - Forma simples e fácil de representar os dados e de fazer consultas difíceis;
 - Em 1980 começaram a ficar mais usuais e dominantes;
 - Empresas se destacaram:
-    - **IMB** compactou drasticamento os dados de programação, possibilitando otimização do tempo;
+    - **IBM** compactou drasticamento os dados de programação, possibilitando otimização do tempo;
     - **Microsoft** criou interfaces gráficas bidimensionais chamadas *Windows*;
     - **Sybase** ganhou evidência devido à sua robustez e qualidade técnica;
     - **Oracle** se destacou na área de banco de dados por apresentar fatores como desempenho, confiabilidade e segurança.
 
 > O banco de dados relacional, área muito relevante na engenharia de dados, foi criado por Edgar Codd.
+
+> O banco de dados relacional, área diretamente atrelada à engenharia de dados, surgiu em 1970.
+
+> Uma das áreas mais atingidas positivamente quanto ao banco de dados relacional foi na problemática computacional com redundâncias e inconsistências.
+
+> O objetivo principal do criador do banco de dados relacional era compatibilizar os dados em computadores.
+
+> A criação do banco de dados relacional foi importante na engenharia de dados, pois, proporcionou uma maior independência dos dados em relação aos programas.
 
 ## Representação de dados
 - Relações entre linhas que consiste em um esquema e uma instância;
@@ -73,7 +81,9 @@ Conforme Date (2004), Banco de dados é um grande sistema computadorizado de inf
     - Não armazena dados atuais nem se atualiza em tempo real e rápida;
     - Realiza análises de dados;
     - Centraliza dados de grandes empresas;
+> Quanto aos sistemas de gerenciamento e gestão, o Data Warehouse trabalha de forma mais independente do que o banco de dados transacional.
 
+> O Data Warehouse é ideal para pesquisas de grandes volumes e não armazena dados atuais.
 - **Banco de dados transacional**: é dependente no que se trata de sistemas de gerenciamento e gestão.
 
 ## Modelagem transacional
@@ -107,7 +117,9 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 
 > O esquema floco de neve é mais complexo do que o esquema estrela.
 
-> No modelo floco de neve não ocorrem ligações entre as dimensões
+> No modelo floco de neve não ocorrem ligações entre as dimensões.
+
+> O esquema floco de neve garante a não existência de dados redundantes.
 
 ### Técnicas de design de esquema Estrela
 
@@ -134,13 +146,18 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
     - Unem de fatos e de dimensões;
     - na tabela de fatos, sendo a chave primária na tabela de dimensão;
 
-## Tipos de dimensões
+### Tipos de dimensões
 - Tempo
 - Produto
 - Loja
 - Cliente
 
-## Etapas de projeto de um modelo dimensional
+## Modelagem dimensional
+>  A modelagem dimensional permite representar dados de forma simples, objetiva e com alto desempenho.
+
+> Na modelagem dimensional se consolidam dimensões específicas de forma a facilitar e aumentar a eficácia e rapidez de consultas organizadas dentro de um sistema.
+
+### Etapas de projeto de um modelo dimensional
 
 - Identificação de processos de negócios;
 - Identificação de fatos e dimensões em seu modelo de dados dimensionais;
@@ -148,7 +165,7 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 - Definição da granularidade dos fatos comerciais;
 - Armazenamento de informações históricas (dimensões que mudam lentamente).
 
-## Benefícios da modelagem dimensional
+### Benefícios da modelagem dimensional
 
 - otimização de desempenho;
 - recuperação rápida de dados;
@@ -156,12 +173,13 @@ Os esquemas são concorrentes entre si. A escolha entre eles varia de acordo com
 - análise multidimensional;
 - redução na redundância de dados.
 
-## Hierarquia de modelos dimensionais
-Hierarquia é a relação entre as dimensões e os atributos de uma determinada informação.
+### Hierarquia de modelos dimensionais
+> Uma hierarquia é a relação entre as dimensões e os atributos de uma determinada informação.
+
 
 > Ajudam a formar bases primárias sendo alinhadas em uma mesma direção nas tabelas com bancos de dados.
 
-Os dados são dispostos dos níveis <mark>mais detalhados para os menos detalhados.
+> Os dados são dispostos dos níveis <mark>mais detalhados para os menos detalhados.
 
 > As hierarquias podem ser adaptadas para a realidade de cada empresa que as utiliza.
 
@@ -192,6 +210,11 @@ Dados multidimensionais estão os fatos e as dimensões de um *Data Warehouse* q
 **Tabela de fatos** relação entre diferentes dimensão, onde são armazenados dados numéricos que representam medidas específicas, permitindo análises multidimensionais.
 
 **Atributos** são campos das tabelas que descrevem características de algo, como propriedades específicas permitindo a organização e análise detalhada de dados.
+
+> Os atributos nas tabelas representam um <mark>fato</mark>, isto é, podem aparecer com dimensão numérica ou textual nas tabelas.
+
+> Os atributos representam as características dos dados apresentados nas tabelas e podem ser de dimensão ou medição.
+
 
 **Fatos** são uma observação do mercado, normalmente com valor numérico.
 
