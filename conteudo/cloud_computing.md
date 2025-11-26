@@ -38,8 +38,13 @@ O NIST (2011) estabelece que o modelo de nuvem é composto por:
 
 
 ## História
-1. Início em 1950
+> Os estudos dos conceitos de Cloud Computing surgiram por volta de 1960, mas só ganhou popularidade mundial em 2006 com Eric Schmidt.
+
+>  O surgimento de computadores pessoais, internet, websites e o armazenamento em nuvem embasaram o Cloud Computing ao longo dos anos.
+
 2. Se tornou popular em 2006 quando Eric Schimdt escreveu sobre ela.
+
+> O século XX foi marcado por grandes desenvolvimentos, entre eles, na área da Tecnologia da Informação (TI).
 
 > As pessoas começaram a perceber os benefícios que o computador oferecia, como praticidade e ganho de tempo.
 
@@ -189,6 +194,8 @@ Segurança é necessária, crucial e existente.
 
 ### Outros serviços:
 
+> Existem outros tipos de modelos de serviços em nuvem como o FaaS, o XaaS, o CaaS, etc.
+
 - FaaS (Function as a Service).
 - CaaS (Content as a Service).
 - ESaaS (Energy Storage as a Service).
@@ -234,7 +241,6 @@ Em resumo, o sistema Tier mede o nível de confiabilidade e tolerância a falhas
 Pode-se entender o sistema Tier como um termômetro de infraestrutura: se um *data center* é um sistema complexo que armazena dados importantes, o nível Tier indica o quão bem protegido e disponível ele é. Um Tier 4, sendo totalmente redundante, seria como ter uma rede de segurança completa (vários backups e caminhos alternativos) para garantir que o serviço nunca pare, enquanto um Tier 1 seria a opção mais básica.
 
 > O sistema Tier se apresenta em forma de pirâmide e é crescente em redundância e em outras falhas de baixo para cima.
-
 
 
 ## Migração para a nuvem
