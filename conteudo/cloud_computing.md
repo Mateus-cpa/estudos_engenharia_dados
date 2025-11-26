@@ -132,6 +132,8 @@ Permite configurar e executar diversos e diferentes programas e serviços vituai
 - Eficiência operacional
 - Alta disponibilidade
 
+> Informações de diferentes tipos, como sistema de tráfego, bancário e de segurança de todo mundo se encontram em data centers.
+
 ### VPN
 Conectividade eficiente com baixo custo.
 
@@ -260,11 +262,13 @@ Pode-se entender o sistema Tier como um termômetro de infraestrutura: se um *da
 > As empresas migrarem para a Cloud Computing, juntamente com uma boa gestão empresarial contínua, faz com que essas organizações administrem melhor os recursos e gastos.
 
 ### Análise de custos
-- é um fator relevante para ocorrer de forma estratégica
+> A análise de custos é um fator relevante para que ocorra uma migração de forma estratégica.
+
 - Análise de custo-benefício: 
     - custo desejável, 
     - mas com segurança mínima e
     - eficiência suficiente.
+
 - tomar decisões com cautela para:
     - economia
     - eficiência
@@ -277,7 +281,11 @@ O responsável deve:
 
 > O responsável pela análise de custos na migração para a nuvem não deve prever somente custos atuais, mas também os custos futuros.
 
+> assim os desenvolvedores entendem a necessidade organizacional de forma coletiva
+
 Sobre a migração:
+
+> Uma migração inteligente é feita por meio de fases ou etapas.
 
 > quando bem elaborados e aplicados, eles garantem processos onde a agilidade e a inovação se encontram e ocasionam eficiência e bons recursos financeiros para as empresas.
 
@@ -290,6 +298,8 @@ Deve-se considerar o fator segurança.
 Estratégias variam de acordo com o objetivo da organização, com o objetivo de auxiliá-las a serem melhores e aumentar sua eficiência operacional.
 
 > Existem atualmente três tipos de modelos de implementação de nuvem, sendo eles: público, privado e híbrido.
+
+> Relatórios personalizados e alertas em tempo real são gerados e possibilitam tomadas de decisões mais ágeis e seguras para arquivos em nuvem.
 
 Migração eficiente é feita por meio etapas ou fases.
 
