@@ -1,13 +1,41 @@
 # Cloud Computing
 ## Conceitos
-Computação em nuvem, onde é possível ter acesso remoto a diferentes tipos de softwares, armazenamento de informações e prtocessamento de dados por meio da internet.
+Tradução: Computação em nuvem.
+
+> Com Cloud Computing é possível ter acesso remoto a diferentes tipos de softwares, armazenamento de informações e processamento de dados por meio da internet.
+
+### NIST
+De acordo com o NIST, Cloud Computing é um modelo para prover acesso ubíquo, conveniente e sob demanda, via rede, a um conjunto compartilhado de recursos computacionais configuráveis (e.g., redes, servidores, armazenamento, aplicações e serviços) que podem ser alocados e deslocados de maneira rápida e com mínimo esforço de gerenciamento ou interação do provedor do serviço.
+
+ Cloud Computing como um modelo de rede onipresente que permite o acesso, conveniente e on-demand, a um conjunto de recursos de computação compartilhados, configuráveis (por exemplo, redes, servidores, armazenamento, aplicativos e serviços) e que podem ser rapidamente provisionados e liberados com o mínimo esforço de gerenciamento ou a interação do provedor de serviços
+
+>  O NIST descreve a Cloud Computing como um modelo permissível ao acesso de redes inteligentes com recursos computacionais.
+
+O NIST (2011) estabelece que o modelo de nuvem é composto por:
+• Cinco características essenciais.
+• Três modelos de serviços.
+• Quatro modelos de implantação.
 
 ## Introdução
 1. Antigamente eram centralizados execução, processamento e armazenamento.
 2. Agora peças menores e mais eficientes.
-3. Rede: tudo que se interconecta e possui acesso à internet
+3. **Rede**: tudo que se interconecta e possui acesso à internet
 
 > Nos dias de hoje, normalmente, entende-se como rede de computadores tudo aquilo que possui acesso à internet e pode se interconectar. Exceções, porém, existem, como por exemplo, as redes domésticas que não precisam de acesso a internet.
+
+> Com o crescente desenvolvimento das redes de computadores cada vez mais se buscam maneiras de melhorar o desempenho delas.
+
+
+> A Cloud Computing revolucionou a forma de se obter e compartilhar dados e informações de maneira geral.
+
+> A Cloud Computing é uma junção de diferentes tecnologias que se convergiram ao longo dos últimos anos.
+
+## Conceitos
+
+> O <mark>Multi-core</mark> é uma técnica de implementação de microprocessadores de alto desempenho.
+
+> Nos dias atuais, pode-se definir as <mark>redes de computadores</mark> como uma malha com muitos sistemas que transmitem dados simultaneamente.
+
 
 ## História
 1. Início em 1950
@@ -17,7 +45,9 @@ Computação em nuvem, onde é possível ter acesso remoto a diferentes tipos de
 
 ### Função
 
-Quebrar barreiras físicas e facilitar de maneira prática e rápida a transmissão de dados e informações, bem como, compartilhar arquivos, acessar aplicativos, etc.
+>A função de uma rede é quebrar barreiras físicas e facilitar de maneira prática e rápida a transmissão de dados e informações.
+
+Bem como, compartilhar arquivos, acessar aplicativos, etc.
 
 Envolve proteção, privacidade e métodos de criptografias.
 
@@ -42,6 +72,8 @@ Envolve proteção, privacidade e métodos de criptografias.
 > Os meios de transmissão nas redes de computadores podem ser dos tipos guiados e não guiados.
 
 > As redes de computadores funcionam por meio de um endereço IP que é um identificador de origem e destino da transmissão de dados.
+
+>O endereço IP não é o único tipo de identificador nas redes, existem outros, como por exemplo, o chamado MAC Address
 
 ### Importância da segurança
 1. Proteção
@@ -151,6 +183,26 @@ Acesso a aplicativos diretamente na nuvem, sem instalação local e atualizaçõ
 
 Segurança é necessária, crucial e existente.
 
+
+### JaaS - *Job as a Service*
+> A JaaS em nuvem está relacionada com a união de recursos na nuvem de forma eficiente.
+
+### Outros serviços:
+
+- FaaS (Function as a Service).
+- CaaS (Content as a Service).
+- ESaaS (Energy Storage as a Service).
+- BDaaS (Big Data as a Service).
+- BaaS (Backup as a Service).
+- GaaS (Game as a Service).
+- RaaS (Robots as a Service).
+- DaaS (Desktop as a Service).
+- DRaaS (Disaster Recovery as a Service).
+- STaaS (Storage as a Service).
+- LaaS (Logging as a Service).
+- MLaaS (Machine Learning as a Service).
+- CaaS (Container as a Service - modelo que usa contêineres como serviço).
+
 ### Serviços de bancos de dados
 - Escalabilidade (atender conforme a demanda)
 - Gerenciamento de forma adequada.
@@ -167,17 +219,19 @@ A interconectividade está relacionda à união de recursos an nuvem de forma ef
 
 ## *Data centers*
 
-### Classificação de Data Centers
-O sistema Tier é usado para classificar um local físico, conhecido como datacenter, onde os computadores são armazenados.
+> Um datacenter, ele corresponde a um local físico que armazena os computadores.
+
+### Classificação de *Data Centers*
+O sistema Tier é usado para classificar um local físico, conhecido como *data center*, onde os computadores são armazenados.
 - **Estrutura**: O sistema Tier se apresenta em forma de pirâmide.
 - **Escala e Redundância**: A classificação vai de uma escala de 1 a 4.
     - Tier 1 indica uma classe sem redundâncias.
     - Tier 4 indica uma classe totalmente redundante.
 - Progressão: O sistema Tier é crescente em redundância e em outras falhas (ou na sua mitigação) de baixo para cima.
 
-Em resumo, o sistema Tier mede o nível de confiabilidade e tolerância a falhas de um datacenter, onde quanto maior o nível (mais alto na pirâmide), maior é a redundância.
+Em resumo, o sistema Tier mede o nível de confiabilidade e tolerância a falhas de um *data center*, onde quanto maior o nível (mais alto na pirâmide), maior é a redundância.
 
-Pode-se entender o sistema Tier como um termômetro de infraestrutura: se um datacenter é um sistema complexo que armazena dados importantes, o nível Tier indica o quão bem protegido e disponível ele é. Um Tier 4, sendo totalmente redundante, seria como ter uma rede de segurança completa (vários backups e caminhos alternativos) para garantir que o serviço nunca pare, enquanto um Tier 1 seria a opção mais básica.
+Pode-se entender o sistema Tier como um termômetro de infraestrutura: se um *data center* é um sistema complexo que armazena dados importantes, o nível Tier indica o quão bem protegido e disponível ele é. Um Tier 4, sendo totalmente redundante, seria como ter uma rede de segurança completa (vários backups e caminhos alternativos) para garantir que o serviço nunca pare, enquanto um Tier 1 seria a opção mais básica.
 
 > O sistema Tier se apresenta em forma de pirâmide e é crescente em redundância e em outras falhas de baixo para cima.
 
@@ -214,6 +268,8 @@ Deve-se considerar o fator segurança.
 
 ### Estratégias de implementação:
 Estratégias variam de acordo com o objetivo da organização, com o objetivo de auxiliá-las a serem melhores e aumentar sua eficiência operacional.
+
+> Existem atualmente três tipos de modelos de implementação de nuvem, sendo eles: público, privado e híbrido.
 
 Migração eficiente é feita por meio etapas ou fases.
 
