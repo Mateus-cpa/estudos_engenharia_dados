@@ -7,7 +7,9 @@ Tradução: Computação em nuvem.
 ### NIST
 De acordo com o NIST, Cloud Computing é um modelo para prover acesso ubíquo, conveniente e sob demanda, via rede, a um conjunto compartilhado de recursos computacionais configuráveis (e.g., redes, servidores, armazenamento, aplicações e serviços) que podem ser alocados e deslocados de maneira rápida e com mínimo esforço de gerenciamento ou interação do provedor do serviço.
 
- Cloud Computing como um modelo de rede onipresente que permite o acesso, conveniente e on-demand, a um conjunto de recursos de computação compartilhados, configuráveis (por exemplo, redes, servidores, armazenamento, aplicativos e serviços) e que podem ser rapidamente provisionados e liberados com o mínimo esforço de gerenciamento ou a interação do provedor de serviços
+Cloud Computing como um modelo de rede onipresente que permite o acesso, conveniente e on-demand, a um conjunto de recursos de computação compartilhados, configuráveis (por exemplo, redes, servidores, armazenamento, aplicativos e serviços) e que podem ser rapidamente provisionados e liberados com o mínimo esforço de gerenciamento ou a interação do provedor de serviços
+
+> Os provedores de serviços em nuvem são organizações especializadas em tecnologia da informação que oferecem às empresas serviços e pacotes escalonáveis.
 
 >  O NIST descreve a Cloud Computing como um modelo permissível ao acesso de redes inteligentes com recursos computacionais.
 
@@ -25,10 +27,12 @@ O NIST (2011) estabelece que o modelo de nuvem é composto por:
 
 > Com o crescente desenvolvimento das redes de computadores cada vez mais se buscam maneiras de melhorar o desempenho delas.
 
-
 > A Cloud Computing revolucionou a forma de se obter e compartilhar dados e informações de maneira geral.
 
 > A Cloud Computing é uma junção de diferentes tecnologias que se convergiram ao longo dos últimos anos.
+
+> A interconexão inteligente de máquinas virtuais promove uma infraestrutura dinâmica e adaptável.
+
 
 ## Conceitos
 
@@ -40,6 +44,9 @@ O NIST (2011) estabelece que o modelo de nuvem é composto por:
 ## História
 > Os estudos dos conceitos de Cloud Computing surgiram por volta de 1960, mas só ganhou popularidade mundial em 2006 com Eric Schmidt.
 
+> Entre os anos 80 e 90 houve uma queda na procura da virtualização devido ao surgimento de microcomputadores baratos e computadores de uso pessoal.
+
+
 >  O surgimento de computadores pessoais, internet, websites e o armazenamento em nuvem embasaram o Cloud Computing ao longo dos anos.
 
 2. Se tornou popular em 2006 quando Eric Schimdt escreveu sobre ela.
@@ -47,6 +54,8 @@ O NIST (2011) estabelece que o modelo de nuvem é composto por:
 > O século XX foi marcado por grandes desenvolvimentos, entre eles, na área da Tecnologia da Informação (TI).
 
 > As pessoas começaram a perceber os benefícios que o computador oferecia, como praticidade e ganho de tempo.
+
+> As redes em nuvem estão em constante evolução e são essenciais para os sistemas modernos.
 
 ### Função
 
@@ -70,7 +79,7 @@ Envolve proteção, privacidade e métodos de criptografias.
 6. Árvore
 7. Híbrida
 
-### Meios de trnasmissão
+### Meios de transmissão
 1. Guiados (com fios)
 2. Não guiados (rádio)
 
@@ -81,12 +90,15 @@ Envolve proteção, privacidade e métodos de criptografias.
 >O endereço IP não é o único tipo de identificador nas redes, existem outros, como por exemplo, o chamado MAC Address
 
 ### Importância da segurança
+
+> Na Cloud Computing assuntos como segurança devem e são levados a sério nessa área de forma constante
+
 1. Proteção
 2. Privacidade
 
 ## Arquitetura e Infraestrutura em Nuvem
 ### Virtualização
-Proporciona a facilidade e o rápido crescimento de serviços atrelados a empresas.
+> A virtualização é a tecnologia que proporciona a facilidade e o rápido crescimento de serviços atrelados a empresas como o Facebook e o Google.
 
 >  A virtualização tem o objetivo de aprimorar o aproveitamento de recursos dos servidores e se apresenta em diferentes níveis.
 
@@ -265,7 +277,9 @@ O responsável deve:
 
 > O responsável pela análise de custos na migração para a nuvem não deve prever somente custos atuais, mas também os custos futuros.
 
+Sobre a migração:
 
+> quando bem elaborados e aplicados, eles garantem processos onde a agilidade e a inovação se encontram e ocasionam eficiência e bons recursos financeiros para as empresas.
 
 
 É possível administrar os recursos de uma organização que adere esse tipo de serviço conforme a demanda que ela tem no momento.
@@ -296,6 +310,8 @@ Migração eficiente é feita por meio etapas ou fases.
 
 ### Conclusão
 É relevante ter boas práticas para garantir maior eficiência.
+
+> Na migração para a nuvem e estratégias de implementação é importante ter boas práticas para implementação da solução em nuvem.
 
 Garantir maior eficiência, eficácia e inovação na organização.
 
