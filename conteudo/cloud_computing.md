@@ -9,6 +9,8 @@ De acordo com o NIST, Cloud Computing é um modelo para prover acesso ubíquo, c
 
 Cloud Computing como um modelo de rede onipresente que permite o acesso, conveniente e on-demand, a um conjunto de recursos de computação compartilhados, configuráveis (por exemplo, redes, servidores, armazenamento, aplicativos e serviços) e que podem ser rapidamente provisionados e liberados com o mínimo esforço de gerenciamento ou a interação do provedor de serviços
 
+> Os provedores de serviços em nuvem são característicos por serem os responsáveis por disponibilizar, gerenciar e monitorar todos os papéis de solução na computação em nuvem.
+
 > Os provedores de serviços em nuvem são organizações especializadas em tecnologia da informação que oferecem às empresas serviços e pacotes escalonáveis.
 
 >  O NIST descreve a Cloud Computing como um modelo permissível ao acesso de redes inteligentes com recursos computacionais.
@@ -102,6 +104,8 @@ Envolve proteção, privacidade e métodos de criptografias.
 
 >  A virtualização tem o objetivo de aprimorar o aproveitamento de recursos dos servidores e se apresenta em diferentes níveis.
 
+> A virtualização permite configurar e executar diversos e diferentes programas e serviços virtuais por meio de um equipamento físico isolado.
+
 Permite configurar e executar diversos e diferentes programas e serviços vituais por meio de equipamentos
 
 #### Tipos
@@ -118,6 +122,8 @@ Permite configurar e executar diversos e diferentes programas e serviços vituai
 - Possibilidade de configurar ambientes de teste
 - Eficiente
 - Com baixo custo
+
+> A Cloud Computing pode ser inserida nas empresas devido às facilidades de acesso a dados e informações que ela fornece.
 
 #### Desvantagens
 - Espaço em disco
