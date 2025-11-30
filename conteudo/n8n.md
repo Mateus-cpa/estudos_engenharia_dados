@@ -113,18 +113,56 @@ Sempre que clicar no botão "Execute Node" ou "Execute Workflow", o fluxo será 
 ![Sort](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/data_transformation_sort.PNG)
 
 ## AI Agents Nodes
+
+### AI Agent
+![AI Agent](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agent.PNG)
+
+É o mais completo e configurável.
+Utiliza ferramentas, memória, chats.
+
+Options:
+**System Message**: prompt inicial do agente.
+
+**Max iterations**: número máximo de interações que o agente pode fazer.
+
+**Return intermediate steps**: se ativado, retorna todas as etapas intermediárias do agente.
+
+**Automaticly passthrough binary images**: se ativado, permite que o agente processe imagens binárias automaticamente.
+
+**Enable streaming**: se ativado, permite o streaming de respostas do agente.
+
+**Batch processing**: se ativado, processa os dados em lotes para melhorar o desempenho.
+
+#### Conexões:
+**Chat Model**: modelo de linguagem para o agente.
+
+**Memory**: memória para o agente.
+- Simple Memory: memória básica que armazena interações anteriores.
+    - Context window length: número de interações anteriores a serem armazenadas. Utilize no máximo 2 em versões gratuitas.
+
+**Tool***: ferramentas que o agente pode usar para realizar tarefas específicas.
+Podem ser bases de dados, APIs, etc.
+
+### OpenAI
+![OpenAI](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agent_openai.PNG)
+
 ### Basic LLM chain
 ![Basic LLM chain](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agente_basic_llm_chain.PNG)
-
 
 ### Information Extractor
 ![Information Extractor](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agente_information_extractor.PNG)
 
+Específico para análise de textos desestruturados e extração de informações.
+
 ### Question and Answer Chain
 ![Question and Answer Chain](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agente_question_and_answer_chain.PNG)
 
+Focado para responder perguntas com base em um contexto fornecido.
+
 ### Sentiment Analysis
 ![Sentiment Analysis](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agente_sentiment_analysis.PNG)
+
+Saber se mensagem é positiva, negativa ou neutra.
 
 ### Summarization Chain
 ![Summarization Chain](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/ai_agente_summarization_chain.PNG)
@@ -136,3 +174,55 @@ Sempre que clicar no botão "Execute Node" ou "Execute Workflow", o fluxo será 
 ### Action Customer Datastore
 ![Action Customer Datastore](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/action_customer_datastore_n8n_training.PNG)
 
+## Chat Model
+### Anthropic
+![Anthropic](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_anthropic.PNG)
+
+### Azure OpenAI
+![Azure OpenAI](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_azure_openai.PNG)
+
+Para quem usa a plataforma Azure da Microsoft.
+
+### AWS Bedrock
+![AWS Bedrock](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_aws_bedrock.PNG)
+
+Para quem trabalha na atmosfera da AWS.
+
+### Cohere
+![Cohere](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_cohere.PNG)
+
+### DeepSeek
+![DeepSeek](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_deepseek.PNG)
+
+### Google Gemini
+![Google Gemini](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_google_gemini.PNG)
+
+Melhor para quem já usa a atmosfera do Google Cloud.
+
+### Groq
+![Groq](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_groq.PNG)
+
+### Mistral
+![Mistral](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_mistral.PNG)
+
+### Lemonade
+![Lemonade](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_lemonade.PNG)
+
+### Ollama
+![Ollama](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_ollama.PNG)
+
+Para quem usa modelos locais com Ollama, sem depender de API externa.
+
+### OpenRouter
+![OpenRouter](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_openrouter.PNG)
+
+### Vercel AI Gateway
+![Vercel AI Gateway](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_vercel_ai_gateway.PNG)
+
+### xAI Grok
+![xAI Grok](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_xai_grok.PNG)
+
+### OpenAI
+![OpenAI](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_openai.PNG)
+
+###
