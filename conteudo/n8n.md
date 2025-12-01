@@ -202,8 +202,8 @@ Melhor para quem já usa a atmosfera do Google Cloud.
 ### Groq
 ![Groq](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_groq.PNG)
 
-### Mistral
-![Mistral](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_mistral.PNG)
+### Mistral Cloud
+![Mistral](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_mistral_cloud.PNG)
 
 ### Lemonade
 ![Lemonade](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_lemonade.PNG)
@@ -225,4 +225,29 @@ Para quem usa modelos locais com Ollama, sem depender de API externa.
 ### OpenAI
 ![OpenAI](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/chat_model_openai.PNG)
 
-###
+## Flow
+### Filter
+![Filter](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_filter.PNG)
+
+### If
+![If](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_if.PNG)
+
+
+### Loop Over Items
+![Loop Over Items](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_loop_over_items.PNG)
+
+### Merge
+![Merge](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_merge.PNG)
+
+### Compare datasets
+![Compare datasets](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_compare_datasets.PNG)
+
+
+### Execute Sub-Workflow
+![Execute Sub-Workflow](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_execute_sub_workflow.PNG)
+
+### Switch
+![Switch](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_switch.PNG)
+
+# Wait
+![Wait](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/n8n/flow_wait.PNG)
