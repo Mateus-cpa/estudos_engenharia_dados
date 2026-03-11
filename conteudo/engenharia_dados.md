@@ -1,6 +1,33 @@
 # Engenharia de dados
 
+## Infográfico
+O Data Mining é umc onjunto de tecnicas e tecnologias que permitem explorar grandes bases de dados, automática ou semiautomaticamente. O objetivo é encontrar padrões repetidos que explicam o comportamento desses dados.
+
+A seguir, veja como se deu a evolução do Data Mining no mundo.
+
+- 1763 - Teorema de Baye's - a publicação do Teorema de Baye's permitiu o entendimento de complexas realidades com base em probabilidades estimadas.
+- 1805 - Regressão - Adrien-Marie Legendre e Carl Friedrich Gauss aplicaram a técnica de regressão para determinar as órbitas dos corpos ao redor do Sol (cometas e planetas)
+
+![infografico1](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico.png)
+
+![infografico2](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico2.png)
+
+![infografico3](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico3.png)
+
+![infografico4](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico4.png)
+
+![infografico5](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico5.png)
+
+![infografico6](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico6.png)
+
+![infografico7](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico7.png)
+
+![infografico8](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico8.png)
+
+![infografico9](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/infografico9.png)
+
 ## Introdução ao Data mining
+
 ### Apresentação
 A Mineração de Dados (Data Mining) tem a função de tratar informações em banco de dados. São informações que, de certa forma, não foram utilizadas e ficaram guardadas como qualquer banco de armazenamento de informações. Foi descoberto que esses dados, não importando a área de atuação, podem ser fundamentais e, então, contribuir para decisões sobre negócios ou pesquisas.
 
@@ -160,3 +187,131 @@ de banco de dados.
 ## 3 Nomenclaturas mais comuns em mineração de dados
 São inúmeras as técnicas para a mineração de dados. Em geral, a escolha da técnica está relacionada ao tipo de dados de que dispomos e ao tipo de informação que a partir deles pretendemos obter. Algumas das técnicas mais aplicadas em mineração de dados incluem as descritas no Quadro 2.
 
+|Ordem|Técnica|Descrição|
+| :--- | :---: | ---: |
+|1|Classificação|Identificação de uma classe de item, estabelecendo conexões entre elementos e seus conjuntos de dados.|
+|2|Agrupamento|Localização de grupos e subgrupos semelhantes para os dados encontrados.|
+|3|Associações|Determinação dos dados de acordo com seus grupos, realizando a modelagem de dependência.|
+||Descrição e visualização|Descrição dos resumos visuais e exploração dos dados.|
+|5|Resumo|Descrição do grupo ao qual o dado faz parte.|
+|6|Estimativa|Previsões de valores contínuos, como renda, saldo bancário, etc.|
+|7|Detecção de desvio|Busca por alterações ou desvio de informações.|
+|8|Análise de link|Análise e localização de relacionamentos para determinado dado.|
+
+De acordo com Castro (2016), todas essas diferentes técnicas colaboram para o surgimento de diferentes nomenclaturas pela diversificação de contextos para a aplicação e o desenvolvimento da mineração de dados. Veja, a seguir, alguns conceitos importantes, de destaque na área técnico-científica.
+
+### Inteligência artificial
+A inteligência artifi cial é uma área da computação que busca construir máquinas autônomas, que possam conduzir tarefas complexas, sem a intervenção humana, o que requer que sejam capazes de perceber e raciocinar. Por se tratar de capacidades inerentemente humanas, o trabalho na área continua desafiador até hoje (BROOKSHEAR, 2013). 
+
+---
+> ### Saiba mais
+>A busca pela construção de máquinas que imitam o comportamento humano tem uma longa história, mas muitos concordam que a área moderna da inteligência artificial surgiu nos anos 1950. Foi precisamente em 1950 que Alan Turing publicou o artigo “Máquinas computacionais e inteligência”, no qual propôs que máquinas poderiam ser programas para apresentar comportamento inteligente. A popularidade da área aumentou consideravelmente com os avanços tecnológicos computacionais e as implementações de algoritmos. 
+---
+
+A inteligência artificial permite ajustes de conhecimentos na coleta de informações e aprendizagem, gerando a capacidade de as máquinas tomarem decisões e entenderem diversos dados com possibilidades de resolução de problemas com nível de dificuldade muito elevado, que humanos não conseguiriam resolver ou demorariam muito tempo para encontrar resultados ou realizar comparações.
+
+Portanto, as máquinas inteligentes foram feitas para funcionarem como seres humanos, só que de forma otimizada. São baseadas em nossa inteligência e capacidade de percepção, de resolução de problemas, de comunicação, de aprendizagem, de adaptação, etc. Não dependem de aprendizado ou feedback, mas de sistemas de controle diretamente programados. Os sistemas de inteligência artificial apresentam as soluções para os problemas por conta própria, por meio de cálculos.
+
+Desde a concepção dos sistemas inteligentes, aplicou-se a manipulação algorítmica para a análise do conjunto ou da estrutura de palavras existente (CASTRO; FERRARI, 2016). Um exemplo clássico desse procedimento, ilustrado na Figura 5, mostra um processo de diagnóstico médico, em que, por meio de palavras-chave, ou comandos que confirmem o comportamento por determinados sintomas, obtém-se o diagnóstico.
+
+Portanto, vemos que a técnica de mineração em dados extraídos é usada pelos sistemas inteligentes para criar soluções, servindo de base para a inteligência artificial e constituindo parte dos códigos de programação com informações e dados necessários para que os sistemas de inteligência artificial funcionem adequadamente.
+
+### Inteligência computacional
+
+De acordo com Aguiar e Junior (2007), aprendizado, percepção, raciocínio, evolução e adaptação são comportamentos inerentes ao ser humano que estão sendo ensinados a sistemas computacionais, entrelaçando com lógicas binárias para que as máquinas possuam entendimentos idênticos, mas otimizados, àqueles que teria um ser humano.
+
+---
+> ### Saiba mais
+> Embora os objetivos da inteligência computacional sejam bastante semelhantes aos da inteligência artificial, ela foi criada com o objetivo de haver uma nova linha de pesquisa, dissociada da inteligência artificial para facilitar investimentos financeiros e o desenvolvimento.
+---
+
+De forma geral, a inteligência computacional abrange:
+- **redes neurais artificiais**, inspiradas no cérebro humano;
+- **conjuntos nebulosos**, inspirados na linguagem natural;
+- **computação evolutiva**, inspirada na teoria da evolução.
+
+As redes neurais merecem destaque aqui. Tentam imitar a forma como o cérebro humano trabalha e têm sido utilizadas em muitos setores, especialmente quando é necessário o reconhecimento de padrões ou imagens, uma vez que podem aprender com a informação que processam. O setor financeiro, por exemplo, utiliza massivamente redes neurais para revisar aplicações de crédito e criar padrões ou perfis de aplicações que seguem duas categorias: aprovada ou negada (BALTZAN; PHILLIPS, 2012).
+
+As várias características das redes neurais incluem:
+- aprender e ajustar-se a novas circunstâncias por conta própria;
+- submeter-se ao processamento paralelo massivo;
+- funcionar sem informações completas ou bem estruturadas;
+- lidar com grandes volumes de informação, com muitas variáveis;
+- analisar relações não lineares.
+
+### Aprendizado de máquina
+Do inglês *machine learning*, consiste em programar os computadores para trabalharem em cima de otimização por meio de experiências ou exemplos gravados
+como dados de entrada. É considerada uma subárea da inteligência artificial que aplica o aprendizado por meio de modelos baseados em experiências, utilizando algoritmos dedutivos por estatística, extração de regras e padrões de grandes volumes de dados. Sua relação com mineração de dados está associada ao princípio de extração automática da informação em cima da base de dados a ser consultada. 
+Fazem parte desse processo métodos como árvores de decisão, regras de associação e classificação, tabelas de decisão, etc (CASTRO; FERRARI, 2016).
+
+O aprendizado de máquina é absorvido por meio de algoritmos, uma sequência de ações exatas que contribuem e resolvem situações ou tarefas de forma automática. A ação desses algoritmos manipula diversos tipos de comandos para executar procedimentos e soluções, momento em que ocorre a aprendizagem das máquinas. É dessa maneira que sistemas de GPS, por exemplo, conseguem analisar e traçar rotas mais rápidas ou melhores para os motoristas, e como, por meio de uma única pesquisa, sites de buscas enviam informações para redes sociais e sites de vendas on-line sobre seu interesse em determinados produtos e serviços.
+
+### Processamento de linguagem natural
+
+A funcionalidade de usar metodologias para converter informações em formulários estruturados pode ser apresentada de maneiras diferentes, como tabelas HTML agrupadas, mapas mentais, gráfi cos, etc. Esse é o processamento da linguagem natural (PNL), em que a função de mineração emprega uma variedade de metodologias para processar textos. Isso acontece porque as máquinas aprendem o idioma natural por meio da simulação da capacidade humana de entender idiomas naturais diversos. Na busca por repostas corretas após análises de perguntas, estando o processo de mineração associado, ocorrerá a consulta e a extração de informações de todos os dados disponibilizados.
+
+Esse processo só é possível devido à interação com áreas como computação, linguística e inteligência computacional, e se diferencia das demais por estar
+fundamentada em uma relação próxima entre natureza e computação. 
+
+Um importante exemplo de PNL são os sistemas de avaliação e análise sobre sentimentos. Esse método serve para que, após a análise de milhões de mensagens em cima de alguma notícia, opinião pública ou pesquisa sobre marcas ou produtos, seja possível a extração de significados sobre os sentimentos apresentados, o que pode ser aplicado em estudos e oportunidades de vantagens competitivas, para melhorar a experiência de clientes e, até mesmo, para melhorar e adequar a marca, produtos ou serviços de acordo com o público e a região atendida.
+
+### *Big data*
+
+É um termo genérico para as estratégias e tecnologias não tradicionais que procuram dar suporte à coleta e ao gerenciamento de grandes quantidades de dados, dados que não podem ser armazenados apenas em uma unidade, pela sua multiplicidade de formas (estruturados, não estruturados, em fl uxo, etc.).
+
+Suas funções incluem reunir, organizar, processar e coletar insights de grandes conjuntos de dados. Graças a sua maneira de coletar e armazenar dados e a suas ferramentas de software intuitivas, diagnósticos embasados por dados estão mais acessíveis do que nunca. Assim, segundo Sharda, Delen e Turban (2019, p. 14):
+
+>[...] em meio à concorrência global, gestores se deparam com uma incrível oportunidade de tomarem melhores decisões usando análise de dados para aumentar receitas, diminuir custos, desenvolver produtos melhores, melhoras a experiência dos clientes, rastrear fraudes antes que aconteçam, além de aumentar o engajamento dos consumidores por meio de segmentação e customização.
+
+Portanto, o Big data funciona como forma de orientar ou garantir direcionamento para que pesquisadores, engenheiros, matemático, administradores, entre outros, consigam decidir de forma correta e promissora sobre ações que envolvem projetos ou a vida de empresas, aumentando de forma eficiente e ágil diversas opções de desenvolvimentos e melhorias.
+
+Na área de recursos humanos, por exemplo, o Big data é utilizado para analisar e processar um grande volume e variedade de informações de forma muito mais rápida e precisa do que faria um ser humano. Como? O Big data oferece inteligência nas decisões de más contratações por meio de sistemas-robôs que conseguem analisar com maior exatidão grandes volumes de currículos de acordo com as definições de palavras-chave. Da mesma maneira que ajuda na contratação de novos funcionários, a ferramenta apoia, por meio de seus algoritmos, o monitoramento das ações e dos resultados dos atuais colaboradores, garantindo aprendizado e desenvolvimento contínuos e retenção da mão de obra qualificada.
+
+Pela leitura este capítulo, vimos que é inegável que a tecnologia de mineração de dados, com todas suas nomenclaturas e ferramentas, é um divisor de águas na forma como se armazena e administra dados. Assim, obtêm-se grandes perspectivas para o futuro, além de muitas soluções e oportunidades que antes eram imaginadas somente em filmes de ficção científica.
+
+## Referências
+
+AGUIAR, H.; JUNIOR, O. (coord.). Inteligência computacional: aplicada à administração,economia e engenharia em Matlab. São Paulo: Thomson Learning, 2007.
+
+BALTZAN, P.; PHILLIPS, A. Sistemas de informação. Porto Alegre: AMGH, 2012. (Série A).
+
+BASKARADA, S.; KORONIOS, A. Data, information, knowledge, wisdom (DIKW): a semiotic theoretical and empirical exploration of the hierarchy and its quality dimension. Australasian Journal of Information Systems, v. 18, nº. 1, p. 5–24, 2013.
+
+BELLINGER, G.; CASTRO, D.; MILLS, A. Data, information, knowledge, and wisdom. 2003. Disponível em: https://homepages.dcc.ufmg.br/~amendes/SistemasInformacaoTP/TextosBasicos/Data-Information-Knowledge.pdf. Acesso em: 21 ago. 2020.
+
+BERNSTEIN, J. H. The data-information-knowledge-wisdom hierarchy and its antithesis. 2009. Disponível em: https://academicworks.cuny.edu/cgi/viewcontent.cgi?referer=https://scholar.google.de/&httpsredir=1&article=1011&context=kb_pubs. Acesso em: 21 ago.2020.
+
+BROOKSHEAR, J. G. Ciência da computação: uma visão abrangente. 11. ed. Porto Alegre: Bookman, 2013. BUTTLE, F. Customer relationship management: concepts and technologies. Amsterdam: Elsevier, 2009.
+
+CASTRO, L. N. de; FERRARI D. G. Introdução à mineração de dados: conceitos básicos, algoritmos e aplicações. São Paulo: Saraiva, 2016.
+
+SFERRA, H. H.; CORRÊA, A. M. C. J. Conceitos e aplicações de data mining: data mining concepts and applications. Revista de Ciência & Tecnologia, v. 11, nº. 22, p. 19–34, 2003.
+
+SHARDA, R.; DELEN, D.; TURBAN, E. Business intelligence e análise de dados para gestão do negócio. Porto Alegre: Bookman, 2019.
+
+SHARPE, N. R.; DE VEAUX, R. D.; VELLEMAN, P. F. Estatística aplicada: administração, economia e  negócios. Porto Alegre: Bookman, 2011.
+
+SRIVASTAVA, A. Understanding linkage between data mining and statistics. International Journal of Engineering Technology, Management and Applied Sciences, v. 3, nº. 10, p. 4–12, out. 2015. Disponível em: https://www.researchgate.net/profile/Abhay_Srivastava6/publication/284166749_Understanding_Linkage_between_Data_Mining_and_Statistics/links/564d60c708aeafc2aaafda60/Understanding-Linkage-between-Data-Mining-and--Statistics.pdf?origin=publication_detail. Acesso em: 20 ago. 2020.
+
+TORGO, L., Data mining with R: learning with case studies. 2nd ed. Boca Raton: Chapman and Hall, 2017.
+
+TURBAN, E.; VOLONINO, L. Tecnologia da informação para gestão: em busca de um melhor desempenho estratégico e operacional. 8. ed. Porto Alegre: Bookman, 2013.
+
+## Leituras recomendadas
+ACKOFF, R. From data to wisdom. Journal of Applied Systems Analysis, nº. 16, p. 3–9, 1989.
+
+AGGARWAL, C. C.; ZHAI, C.X. Mining Text Data. London: Springer, 2012.
+
+AVEN, T. Risk, surprises and black swans: fundamental ideas and concepts in risk assessment and risk management. Abingdon: Routledge, 2014.
+
+BISHOP, C. M. Pattern Recognition and Machine Learning. London: Springer. 2006.
+
+FAYYAD, U. M.; PIATETSKY-SHAPIRO, G.; SMYTH, P. From Data Mining to Knowledge Discovery in Databases. Artificial Intelligence Magazine, v. 17, nº. 3, 1996. Disponível em: https://www.aaai.org/ojs/index.php/aimagazine/article/view/1230/1131. Acesso em: 20 ago. 2020.
+
+JIFA, G.; LINGLING, Z. Data, DIKW, Big data and Data Science. Procedia Computer Science, v. 31, p. 814–821, dez. 2014.
+
+KUMAR, V.; REINARTZ, W. Customer relationship management: concept, strategy and tools. Berlin: Springer Science & Business Media, 2012.
+
+PROVOST, F.; FAWCETT, T. Data science for business. Sebastopol: O’Reilly Media, 2013.
+
+WITTEN, I.; FRANK, E.; HALL, M. Data mining: practical machine learning tools and techniques. 3rd ed. San Francisco: Elsevier, 2011.
