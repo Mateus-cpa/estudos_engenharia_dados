@@ -315,3 +315,5 @@ KUMAR, V.; REINARTZ, W. Customer relationship management: concept, strategy and 
 PROVOST, F.; FAWCETT, T. Data science for business. Sebastopol: O’Reilly Media, 2013.
 
 WITTEN, I.; FRANK, E.; HALL, M. Data mining: practical machine learning tools and techniques. 3rd ed. San Francisco: Elsevier, 2011.
+
+## Nomeclaturas de data mining
