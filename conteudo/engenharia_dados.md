@@ -327,7 +327,231 @@ WITTEN, I.; FRANK, E.; HALL, M. Data mining: practical machine learning tools an
 ## Objetivos de aprendizagem
 Ao final deste texto, você deve apresentar os seguintes aprendizados:
 - Definir descoberta de conhecimento em base de dados.
-- Explicar as etapas do processo de descoberta de conhecimento em
-base de dados.
-- Demonstrar o processo de descoberta de conhecimento em base
-de dados.
+- Explicar as etapas do processo de descoberta de conhecimento em base de dados.
+- Demonstrar o processo de descoberta de conhecimento em base de dados.
+
+## Introdução ao processo de descoberta de conhecimento em base de dados
+
+Do avanço da tecnologia, decorreram um aprimoramento de hardware e a evolução na capacidade de comunicação. Por consequência, uma enorme quantidade de dados, de diversos tipos de dispositivos interconectados, são gerados e armazenados a todo instante. Nesse contexto, é necessário desenvolver habilidades que permitam analisar e extrair conhecimento dessa quantidade massiva de dados para obter informações que darão suporte a tomadas de decisões.
+
+A área do conhecimento capaz de extrair informações de bases de dados diversos tem sido cada vez mais valorizada por empresas de diferentes setores, que visam extrair informações para aprimorar desde o setor de planejamento até a qualidade final dos produtos ofertados. O processo de explorar bases de dados usando ferramentas adequadas para obter conhecimento ficou conhecido como descoberta de conhecimento em bases de dados (knowledge discovery in databases, ou KDD).
+
+Neste capítulo, você vai estudar sobre a KDD e por que seu uso é tão importante para a extração de informações que apoiam tomadas de decisões. Você também vai compreender quais são as etapas do processo de KDD e, por fim, verá um exemplo prático desse processo.
+
+A KDD é um processo contínuo e composto de diferentes etapas. Uma de suas funções consiste em desenvolver, aprimorar e aplicar técnicas e ferramentas capazes de extrair informações úteis dos dados armazenados. Devido ao aumento da disponibilidade de dados e ao crescente interesse por informações que agreguem valor ao negócio, o uso da KDD se tornou comum nos últimos anos, sendo reconhecido por fornecer bons resultados em análise de dados nas indústrias, bancos, hospitais, empreendimentos imobiliários, no setor de telecomunicações e na ciência (CASTRO; FERRARI, 2016).
+
+Na ciência, uma das primeiras aplicações foi na área de astronomia. O estudo foi considerado um sucesso. Segundo Fayyad, Piatetsky-Shapiro e Smyth (1996), o sistema utilizado pelos astrônomos consistia em analisar novas imagens do céu, comparar com imagens de pesquisas anteriores, classificar e catalogar novos objetos. Nessa primeira aplicação na área científica, o sistema computacional foi utilizado para processar 3 terabytes de imagens e detectou na ordem de 109 objetos no espaço, algo inimaginável sem o uso de técnicas para análise de dados.
+
+Na área de negócios, a KDD foi utilizada pela primeira vez em 1994, no setor de marketing, com o objetivo de classificar os clientes em diferentes grupos a partir da detecção de padrões em dados de compra, prever o comportamento de cada grupo e planejar o marketing ideal (BERRY, 1994). Além disso, De acordo com Hall, Mani e Barr (1996), a KDD foi utilizada para extrair informações dos dados como apoio a tomadas de decisões sobre investimentos, para detecção de fraudes, a partir da identificação de transações financeiras que podem indicar lavagem de dinheiro (SENATOR et al., 1995), e no setor de fabricação, para diagnóstico e predição de problemas em equipamentos (MANAGO; AURIOL, 1996).
+
+Por causa da natureza multidisciplinar da KDD e da evolução contínua da tecnologia, a KDD atualmente conta com ferramentas de diferentes áreas do conhecimento, como aprendizado de máquina, técnicas de reconhecimento de padrões, métodos estatísticos, modelos probabilísticos e alta performance computacional, que permitem uma alta extração de conhecimento das bases de dados (SILVA; PERES; BOSCARIOLI, 2016).
+
+A KDD se refere ao processo inteiro de extração de informações úteis a partir dos dados, sendo apresentada na literatura como um processo contínuo, que se divide em cinco etapas (CASTRO; FERRARI, 2016):
+
+1. escolha da base de dados e seleção das variáveis de interesse (dados relevantes);
+2. pré-processamento dos dados;
+3. transformação dos dados pré-processados;
+4. reconhecimento de padrões;
+5. interpretação dos resultados para produzir conhecimento.
+
+---
+> ### Fique atento
+> Embora seja comum utilizar mineração de dados (data mining) como sinônimo de KDD, a mineração de dados é apenas uma das etapas da KDD. A mineração de dados é responsável por aplicar métodos para transformar os dados em padrões que podem ser interpretados como conhecimento para auxiliar na tomada de decisões. 
+>O termo mineração de dados foi criado como alusão ao processo de mineração de minerais valiosos. Uma base de dados pode ser comparada a uma mina, da qual, pelo uso de ferramentas adequadas, podem ser extraídos minerais preciosos; no caso, o conhecimento.
+---
+
+Nesta seção, vimos a definição do processo de KDD e suas primeiras aplicações em diferentes áreas. A seguir, serão apresentadas as etapas do processo de KDD, destacando o objetivo de cada uma delas.
+
+## Etapas do processo de descoberta de conhecimento em base de dados
+
+Conforme destacado anteriormente, o processo de KDD é cíclico, contínuo e, normalmente, dividido em cinco etapas, descritas a seguir.
+
+### Seleção dos dados
+
+Antes de iniciar o processo de KDD, é necessário desenvolver um entendimento sobre o domínio da aplicação para identifi car quais são os objetivos que o cliente deseja alcançar (AMARAL, 2016). Vale ressaltar a importância do trabalho em equipe nessa etapa: o profi ssional analista de dados necessita da ajuda de um outro profi ssional, que esteja a par da situação e que tenha maior conhecimento sobre a aplicação para fornecer uma visão mais profunda sobre o processo a ser analisado. Só assim conseguirá traçar a melhor estratégia para alcançar os objetivos desejados com a KDD. De posse do conjunto de dados e ciente das premissas e dos objetivos acerca da investigação, as etapas do processo de KDD se iniciam.
+
+Após determinar os principais objetivos do estudo, uma análise criteriosa sobre as variáveis que são relevantes para o processo deve ser realizada. A eficiência da descoberta de informações valiosas a partir dos dados começa com a seleção correta das variáveis do caso de estudo. Essa etapa de seleção dos dados é importante não só para garantir que as variáveis mais impactantes do estudo de caso foram selecionadas, mas também para descartar os dados que não são úteis e, consequentemente, reduzir a complexidade e o custo computacional das etapas seguintes.
+
+### Exemplo
+
+Em 2020, o mundo foi atingido por uma pandemia que provocou milhões de contaminações e incontáveis mortes. A Covid-19 é uma doença causada pelo Coronavírus SARS-CoV-2, uma família de vírus que causam infecções respiratórias. Pela gravidade da situação, milhares de pesquisadores do mundo inteiro começaram a trabalhar com os dados disponíveis em relação ao novo Coronavírus com diferentes interesses. Alguns tópicos de investigação incluem:
+- modelagem da vida, comportamento e disseminação do vírus;
+- modelagem da disseminação temporal e geográfica do vírus;
+- predição do número de casos e mortes;
+- análise de logística em relação a suprimentos médicos;
+- metodologias para rápido diagnostico;
+- desenvolvimento e aprimoramento de ventiladores pulmonares;
+- desenvolvimento de software para ajudar na coordenação paciente-hospital;
+- soluções tecnológicas para tratamento médico e diagnóstico;
+- desenvolvimento de vacinas.
+
+Observe que todos os tópicos estão relacionados ao Coronavírus e todos dependem da extração de conhecimento a partir dos dados. Entretanto, para atingir o interesse de cada tópico, as variáveis selecionadas para cada estudo serão diferentes e fundamentais.
+
+### Pré-processamento e transformação dos dados
+
+As bases de dados são formadas por múltiplas variáveis e observações. Após selecionar as variáveis de interesse, o pré-processamento visa preparar os dados para uma análise efi ciente e efi caz. Nessa etapa, é necessário verificar se existem ruídos e dados inconsistentes (limpeza dos dados), preencher valores faltantes utilizando métodos adequados e eliminar outros fatores indesejáveis, que podem comprometer o processo de extração de conhecimento a partir dos dados (CASTRO; FERRARI, 2016).
+
+Além disso, a etapa de pré-processamento dos dados é responsável por fazer a integração de dados obtidos de múltiplas fontes. Ou seja, é comum buscar variáveis de diferentes bases de dados para formar um conjunto que contenha todas as variáveis que são importantes para realizar a KDD de diferentes áreas (CASTRO; FERRARI, 2016).
+
+A transformação consiste em adaptar os dados em formatos apropriados aos métodos escolhidos para a etapa de mineração dos dados. Exemplos de transformações são: mudança de dados contínuos para discretos, quando o modelo exige que os dados sejam discretos, redução da taxa de amostragem e normalização dos dados.
+
+---
+> ### Fique atento
+> É comum ter dados faltantes nas bases de dados e em diferentes proporções. Esse problema pode ser causado por diferentes razões: falha no sistema elétrico de potência, fatores ambientais que provocam falhas nos sistemas de aquisição de dados, perda de evidências obtidas por meio de experimentos científicos, falha na rede de transmissão de dados, erro humano e falha de sensores. Entretanto, se os valores ausentes não forem tratados de forma correta ou, simplesmente, forem descartados, as informações encontradas a partir da análise de dados podem possuir viés e resultar em predições ruins. Tratar os valores ausentes após a seleção dos dados é considerado uma tarefa fundamental para que o processo de KDD funcione corretamente.
+---
+
+### Mineração de dados
+
+Essa etapa do processo de KDD consiste em aplicar métodos capazes de extrair padrões a partir dos dados pré-processados. A partir dos padrões descobertos, é possível gerar conhecimento útil para um processo de tomada de decisão (SILVA; PERES; BOSCARIOLI, 2016). Vale ressaltar que o método a ser utilizado durante a mineração de dados vai depender dos tipos dos dados à disposição e do tipo de conhecimento demandado (SILVA; PERES; BOSCARIOLI, 2016). Por contar com ferramentas de diversas áreas, a mineração de dados é um processo multidisciplinar, que engloba conhecimentos de áreas como estatística, probabilidade, aprendizagem de máquina, reconhecimento de padrões, inteligência artifi cial e computação de alto desempenho.
+
+A etapa de mineração de dados é responsável por diversas tarefas, que normalmente são classificadas em duas categorias: descritivas e preditivas. As tarefas descritivas têm o objetivo de encontrar padrões que descrevem os dados de maneira que o ser humano possa interpretar e transformar em conhecimento; ou seja, tem como objetivo caracterizar as propriedades gerais dos dados. Por outro lado, as tarefas preditivas estimam valores futuros ou desconhecidos utilizando observações passadas dos atributos (CASTRO; FERRARI, 2016; FAYYAD; PIATETSKY-SHAPIRO; SMYTH, 1996). A seguir, as principais tarefas da etapa de mineração de dados são descritas sucintamente.
+
+### Análise descritiva de dados
+A análise descritiva de dados não necessita de ferramentas sofi sticadas e geralmente é utilizada na etapa inicial do processo de mineração dos dados. Essa tarefa visa aplicar métodos para quantifi car, explorar e descrever características intrínsecas aos dados. Os recursos da estatística descritiva são comuns nessa etapa, permitindo investigar a distribuição de frequência dos dados e avaliar medidas de posição e dispersão. Essas informações geralmente são representadas por meio de gráficos, como gráficos em barra, histograma e outras ferramentas equivalentes capazes de ilustrar o conhecimento adquirido sobre os dados (CASTRO; FERRARI, 2016).
+
+#### Exemplo
+Uma ONG fez um levantamento do número de filhos por família em uma localidade afetada por eventos climáticos para tentar conseguir suprimentos de ajuda. Para isso, 25 famílias afetadas informaram o número de filhos:
+
+Número de filhos = [3, 2, 5, 1, 3, 4, 4, 5, 3, 3, 3, 2, 2, 2, 1, 2, 2, 3, 1, 3, 3, 3, 0, 3, 2]
+
+Analisando diretamente os dados coletados, não é possível ter uma visão geral sobre as famílias, então fica difícil estabelecer uma análise da situação. Entretanto, você pode usar a análise descritiva para fazer uma análise completa com a tabela de distribuições de frequência mostrada no quadro abaixo e com o histograma ilustrado na Figura 2.
+
+| Número de filhos | Frequência absoluta | Frequência relativa (%) | Frequência relativa acumulada (%) |
+| :--- | :---: | :---: | ---: |
+| 0 | 1 | 4,0 | 4,0| 
+| 1 | 3 | 12,0 | 16,0| 
+| 2 | 7 | 28,0 | 44,0| 
+| 3 | 10 | 40,0 | 84,0| 
+| 4 | 2 | 8,0 | 92,0| 
+| 5 | 2 | 8,0 | 100| 
+| Total | 25 | 100 | --- |
+
+![kdd_filhos](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/kdd_figura2_numero_filhos.png)
+
+
+Analisando a distribuição de frequência, é possível concluir que a maioria das famílias, 40%, tem 3 filhos. A frequência acumulada mostra que 84% das famílias entrevistadas possuem de 0 a 3 filhos e que apenas 16% possuem de 4 a 5 filhos. Só uma família entre as entrevistadas não tem filhos. O histograma deixa claro as afirmações feitas a partir da tabela e evidencia que a maior concentração de frequência é de famílias que têm 2 ou 3 filhos.
+
+### Análise preditiva de dados
+
+A predição se divide, basicamente, em duas tarefas: classifi cação e estimação. A **classificação** consiste em construir e utilizar um modelo para avaliar a classe de um objeto não rotulado; isto é, detectar padrões a partir dos dados que permitem classificar um objeto como pertencente à uma classe conhecida *a priori*. Por sua vez, a **estimação** tem como objetivo inferir o valor de um ou mais atributos de uma variável utilizando seu histórico de dados.
+
+De acordo com Castro e Ferrari (2016), ambas as tarefas usam conhecimentos a priori para o processo de aprendizagem do modelo de predição, denominado **aprendizagem supervisionada** (CASTRO; FERRARI, 2016). 
+
+**Agrupamento**, ou **clustering**, é o processo responsável por agrupar um conjunto de variáveis em grupos de variáveis similares; ou seja, a partir dos dados de entrada, agrupar os objetos com padrões semelhantes sem nenhum tipo de conhecimento *a priori*. Cada grupo formado pode ser visto como uma classe de objetos. Como não existem informações de rótulos das classes dos dados de treinamento, esse processo é conhecido como **treinamento não supervisionado** (SILVA; PERES; BOSCARIOLI, 2016). A clusterização, ou agrupamento, busca maximizar a similaridade intraclasse e minimizar a similaridade interclasse.
+
+---
+> ### Fique atento
+> As tarefas de classificação e agrupamento não são iguais. Veja as situações práticas:
+> - Você tem, no banco de dados, o perfil de consumo de diferentes máquinas empresariais. Uma nova máquina foi comprada, e a empresa deseja classificar a característica de consumo da máquina. Nesse caso, você vai observar o padrão de consumo da máquina e **classificá-la**, comparando com a informação *a priori* disponível na base de dados.
+> - Uma empresa comprou várias máquinas e gostaria de organizar os circuitos elétricos de alimentação com máquinas com o mesmo perfil de consumo. Nesse caso, você não tem informações a priori, e a intenção é agrupar máquinas com perfil de consumo semelhante. Para isso, você vai usar técnicas de agrupamento.
+---
+
+Há diversas aplicações reais nas quais o objetivo é encontrar relações entre as variáveis. Essas relações podem indicar causa e feito entre duas variáveis ou, simplesmente, que elas estão correlacionadas. Essa tarefa é conhecida como associação. A construção correta sobre as associações e sobre a intensidade das conexões entre variáveis permite inferir a probabilidade de ocorrência de um determinado evento dado a ocorrência de um outro evento a ele associado (AMARAL, 2016).
+
+### Exemplo
+Você foi contratado para trabalhar com previsão de geração de energia eólica de uma turbina. A base de dados contém o histórico das seguintes variáveis: 
+- X é a velocidade do vento.
+- Y é a direção do vento.
+- Z é a energia gerada pela turbina eólica.
+
+Após aplicar uma técnica de detecção de associação entre as variáveis, você descobriu que a velocidade do vento e a direção do vento impactam a quantidade de energia gerada; ou seja, X Z e Y Z (Z está associado a X e Y).
+
+Após determinar as associações, você consegue inferir os valores de Z condicionado aos valores de X e Y, que é um modelo mais sofisticado do que um modelo obtido apenas com o histórico de geração de energia da turbina eólica.
+
+## Interpretação dos resultados
+
+O último passo do processo de KDD é interpretar os padrões encontrados pela mineração dos dados e convertê-los em conhecimento. Após interpretar os resultados, as informações são utilizadas para apoiar tomadas de decisões estratégicas.
+
+Esse processo de KDD para tomada de decisão estratégica está relacionado a um termo muito comum atualmente: **inteligência de negócios** (*business intelligence*). Todo o processo de KDD atualmente ocorre de forma cíclica, em empresas de diversas áreas. Com isso, é possível acompanhar as mudanças e tendências da produção e seguir aprimorando para agregar valor ao negócio.
+
+---
+> ### Saiba mais
+> A etapa de mineração de dados do processo de KDD tem como recursos diversas metodologias. Veja, abaixo, as mais populares para cada tarefa.
+> - **Análise descritiva dos dados**: análise de distribuição de frequências; representação gráfica de séries temporais; diagrama de dispersão; medidas de tendência central e posição (média aritmética simples, mediana, moda, percentis); medidas de variabilidade (amplitude total, desvio padrão, coeficiente de variação); outras representações gráficas (boxplot, histograma).
+> - Estimação: regressão linear; regressão polinomial; modelos autorregressivos; persistência; redes neurais; modelos markovianos. 
+> - Classificação: classificador K-NN; árvores de decisão; redes neurais; classificador Naive Bayes.
+> - Agrupamento, ou clusterização: algoritmo k-médias (k-means); fuzzy k-médias; árvore geradora mínima.
+> - Associação: rede bayesiana; cadeia de Markov; rede de causalidade; informação mútua; correlação; partial directed coherence (PDC).
+
+---
+
+A seguir, os conceitos apresentados anteriormente serão descritos em aplicações do processo de KDD.
+
+## Aplicação do processo de descoberta de conhecimento em base de dados
+
+O processo de KDD é versátil, visto que a mineração dos dados conta com ferramentas multidisciplinares que permitem a adaptação para trabalhar em diversas áreas. Na literatura, existem aplicações típicas como detecção de fraudes, predição do mercado financeiro, análise de crédito, predição de situação financeira corporativa, etc. (CASTRO; FERRARI, 2016). Com relação a segmentos, o uso do processo de KDD inclui setor fi nanceiro, planejamento de logística empresarial, previsão nos setores de energias tradicionais e renováveis, otimização de sistemas elétricos, educação, pesquisa cientifica, estudos clínicos, otimização de recursos e internet (sites de venda, redes sociais e sites informativos) (CASTRO; FERRARI, 2016). Ou seja, o processo de KDD é aplicável em qualquer tipo de base de dados, basta entender o problema, selecionar os dados corretamente, tratar os dados, converter os dados para uso na metodologia adequada ao problema e aplicar essa metodologia ideal para extrair o conhecimento necessário. A seguir, veja algumas aplicações possíveis.
+
+### Detecção de fraudes em cartões de crédito
+
+Na atualidade, grande parte das compras feitas pela internet em sites e lojas de comércio eletrônico ocorrem com o pagamento via cartão de crédito. Segundo a Associação Brasileira das Empresas de Cartões de Crédito e Serviços (ABECS), durante o ano de 2019, os brasileiros realizaram R$ 1,84 trilhão em compras com cartões de crédito, débito e pré-pagos, sendo R$ 1 trilhão correspondente às compras com cartão de crédito. Esses números representam um aumento de 18,7% em relação a 2018. Além disso, o aumento da quantidade de estabelecimentos que aceitam cartão de crédito e o medo da população de andar com dinheiro e ser assaltado contribuem para um aumento constante de cidadãos que usam cartões de crédito no dia a dia (CASTRO; FERRARI, 2016).
+
+Transações fraudulentas com cartões de crédito representam um grande problema para a economia, prejudicando não só as empresas que administram os cartões, mas também os usuários, que constantemente são vítimas de golpes. Nesse contexto, é necessário estabelecer um controle eficiente de transações comerciais feitas com cartão de crédito. Para isso, mecanismos de verificação são construídos para tentar detectar e impedir tentativas de fraudes (CASTRO; FERRARI, 2016).
+
+Um dos principais interesses das empresas administradoras de cartões de crédito é conseguir detectar fraudes de forma rápida e eficiente a partir do conhecimento extraído das bases de dados, que informam sobre o comportamento normal de um usuário legítimo em relação ao uso do cartão. Esse objetivo utiliza métodos de classificação, agrupamento e estimação. Entretanto, essa detecção automática de fraude ainda é um problema complexo e desafiador, que tem recebido atenção de diversos especialistas, porque: há uma grande quantidade de transações feitas diariamente; o padrão de consumo do usuário não é estacionário, ou seja, pode mudar repentinamente devido a uma mudança na rotina; a quantidade de transações legítimas é muito superior, dificultando o treinamento dos modelos classificadores; e os criminosos mudam constantemente a maneira de agir, o que requer grandes mudanças nos modelos para não perder aderência e resultar em predições equivocadas (CASTRO; FERRARI, 2016).
+
+### Estimação de produtividade de grãos
+
+O Brasil está entre os maiores produtores e exportadores de produtos agropecuários do mundo. Na produção de grãos, o Brasil é responsável por 28% da produção mundial de café, é o maior produtor de soja do mundo (ultrapassou os Estados Unidos) e tem grande destaque na produção de milho, arroz, trigo e feijão. Estimar os resultados de uma colheita pode ajudar na indicação de técnicas de correção do solo, controle dos processos de irrigação, aprimoramento do controle de pragas e direcionamento dos investimentos para maximizar os lucros. Veja, a seguir, o exemplo real sobre produção de café de alta qualidade na Região das Matas de Minas, no estado de Minas Gerais (ZAIDAN et al., 2017).
+
+#### Exemplo
+No Brasil, o cultivo do café é considerado um dos mais tradicionais da agricultura, sendo, por isso, uma das *commodities* que mais contribuem com o produto interno bruto e com a movimentação da economia do País. Os cafés produzidos na Região das Matas de Minas podem ser chamados de cafés de qualidade por apresentarem diversidade de sabores e atributos, e por terem sido premiados em concursos nacionais e internacionais.
+
+Dada a importância da Região das Matas de Minas na produção cafeeira e a crescente demanda por cafés de qualidade, torna-se importante o estudo da análise da influência dos fatores do ambiente e da origem genética da planta na qualidade da bebida produzida.
+
+1. **Entendimento do problema e seleção dos dados**. Para investigar a influência genética e os fatores do ambiente na qualidade da bebida produzida na Região das Matas de Minas, foram coletadas amostras de dois tipos de café (catuaí vermelho e catuaí amarelo), plantados em duas encostas com orientações distintas em relação ao Sol (Noruega e Soalheira) e em quatro níveis distintos de estrato altitude (EA): EA < 700m; 700 <= EA <825m; 825 <= EA <950m; EA >= 950m. A bebida produzida por cada um dos 16 grupos de amostras (8 de catuaí amarelo e 8 de catuaí vermelho) deve ser avaliada de acordo com os indicadores da Associação Brasileira de Cafés Especiais (BSCA), que propõe a avaliação dos seguintes parâmetros: bebida limpa, balanço, sabor, acidez, doçura, retrogosto e corpo.
+2. A **etapa de pré-processamento e transformação** apenas verifica a quantidade de amostras coletadas em cada grupo, visto que os índices de avaliação já são numéricos e podem ser processados sem alterações na etapa de mineração dos dados.
+3. Na etapa de **mineração dos dados**, foram utilizadas ferramentas da estatística descritiva para análise de dispersão e posição dos indicadores de cada um dos 16 grupos. Veja os resultados na Figura 3.
+
+4. **Conhecimentos obtidos**. As variáveis fatores do ambiente e variedade da planta não exercem muita influência nas notas dos cafés quando analisadas de forma isolada. A combinação entre os fatores do ambiente (altitude e orientação da encosta da montanha) e a variedade da planta exerce maior influência na qualidade final da bebida do café produzido na região das Matas de Minas. Entre os atributos analisados, os que mais contribuem para a caracterização de semelhança entre os cafés da Região das Matas de Minas são corpo e doçura. Os dois tipos de café apresentaram notas que os classificam como Cafés *Premium*, demonstrando, assim, grande potencial para a expressão da qualidade sensorial da bebida. Com o estudo realizado, é possível traçar uma estratégia de investimento para a combinação entre os fatores do ambiente e a variedade da planta que resultam na melhor qualidade. Observe que, para o catuaí amarelo, todas as melhores notas do plantio na face Noruega foram encontradas no estrato 1 (<700m). Na face Soalheira, o café catuaí amarelo apresentou predominância dos maiores resultados para o estrato 4.
+
+Neste capítulo, você viu que o processo de KDD se tornou fundamental para empresas de diversos setores. Seu uso permite extrair informações valiosas que auxiliam nas tomadas de decisões e impulsionam o desenvolvimento das empresas.
+
+## Referências
+AMARAL, F. Introdução à ciência de dados, mineração e big data. Rio de Janeiro: Alta
+Books, 2016.
+
+BERRY, J. Database marketing. Business Week, 1994. Disponível em: https://www.bloomberg.com/news/articles/1994-09-04/database-marketing. Acesso em: 2 ago. 2020.
+
+CASTRO, L. N. de; FERRARI, D. G. Introdução à mineração de dados: conceitos básicos,
+algoritmos e aplicações. São Paulo: Saraiva, 2016.
+
+FAYYAD, U.; PIATETSKY-SHAPIRO, G.; SMYTH, P. From data mining to knowledge Discovery in databases. AI Magazine, v. 17, nº. 3, p. 37–54, 1996. Disponível em: https://www.
+aaai.org/ojs/index.php/aimagazine/article/view/1230/1131. Acesso em: 2 ago. 2020.
+
+HALL, J.; MANI, G.; BARR, D. Applying computational intelligence to the investment
+process. In: PROCEEDINGS of CIFER-96: computational intelligence in financial engineering. Washington: IEEE Computer Society, 1996.
+
+MANAGO, M.; AURIOL, M. Mining for OR. ORMS Today, nº. esp., p. 28–32, fev. 1996. 
+
+SENATOR, T. et al. The financial crimes enforcement network ai system (FAIS): identifying
+potential money laundering from reports of large cash transactions. AI Magazine, v. 16,
+nº. 4, p. 21–39, 1995. Disponível em: https://www.aaai.org/ojs/index.php/aimagazine/
+article/view/1169/1086. Acesso em: 2 ago. 2020.
+
+SILVA, L. A. da; PERES, S. M.; BOSCARIOLI, C. Introdução à mineração de dados: com
+aplicações em R. Edição 1. Rio de Janeiro: Elsevier, 2016.
+
+STEINER, M. T. A. et al. Abordagem de um problema médio por meio do processo KDD
+com ênfase à análise exploratória dos dados. Gestão & Produção, v. 13, nº. 2, maio/ago.
+2006. Disponível em: https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0104-
+-530X2006000200013&lng=en&nrm=iso. Acesso em: 2 ago. 2020.
+
+ZAIDAN, Ú. R. et al. Ambiente e variedades influenciam a qualidade de cafés das matas
+de minas. Coffee Science, v. 12, nº. 2, p. 240–247, abr./jun. 2017. Disponível em: http://www.
+sbicafe.ufv.br/bitstream/handle/123456789/8667/Coffee%20Science_v12_n2_p240-
+247_2017.pdf?sequence=1&isAllowed=y. Acesso em: 2 ago. 2020.
+
+### Leituras recomendadas
+
+DUNKEL, B. et al. Systems for KDD: from concepts to practice. Future Generation Computer
+Systems, v. 13, nº. 2–3, p. 231–242, nov. 1997.
+
+GRUS, J. Data science do zero: primeiras regras com o Python. Rio de Janeiro: Alta
+Books, 2018.
+
+# Seleção de dados
+
+## Infográfico
+
+![selecao_dados_infografico](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/selecao_de_dados_infografico.png)
+
