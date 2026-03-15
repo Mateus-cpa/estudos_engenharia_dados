@@ -317,3 +317,17 @@ PROVOST, F.; FAWCETT, T. Data science for business. Sebastopol: O’Reilly Media
 WITTEN, I.; FRANK, E.; HALL, M. Data mining: practical machine learning tools and techniques. 3rd ed. San Francisco: Elsevier, 2011.
 
 ## Nomeclaturas de data mining
+
+# A descoberta de conhecimento em base de dados (KDD)
+
+## Infográfico
+
+![kdd_infografico](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/kdd_infografico1.png)
+
+## Objetivos de aprendizagem
+Ao final deste texto, você deve apresentar os seguintes aprendizados:
+- Definir descoberta de conhecimento em base de dados.
+- Explicar as etapas do processo de descoberta de conhecimento em
+base de dados.
+- Demonstrar o processo de descoberta de conhecimento em base
+de dados.
