@@ -714,3 +714,209 @@ GOLDSCHMIDT, R.; PASSOS, E. Data mining: um guia prático. Rio de Janeiro: Campu
 
 GROTZINGER, J.; JORDAN, T. Para entender a terra. 6. ed. Porto Alegre: Bookman, 2013.
 
+# Pré-processamento de dados
+
+## Apresentação
+As técnicas e os algoritmos para mineração de dados podem ser poderosas ferramentas para a obtenção de conhecimento. Entretanto, a qualidade de um modelo depende da qualidade de seus dados. Em geral, bases de dados reais obtidas por sistemas automáticos, ou até mesmo pela ação humana, podem apresentar inconsistências que podem influenciar os resultados dos algoritmos de mineração. Cabe ao cientista de dados detectar e corrigir possíveis problemas antes de iniciar o processo de mineração em uma etapa denominada pré-processamento de dados.
+
+Nesta Unidade de Aprendizagem, você aprenderá sobre o conceito de pré-processamento de dados e as tarefas de pré-processamento que visam à preparação de bases de dados para análises posteriores. Também conhecerá os principais processos dessa etapa como limpeza, integração, redução, transformação e discretização de dados. Por fim, verá exemplos de aplicações de pré-processamento em bases de dados.
+
+Bons estudos.
+
+Ao final desta Unidade de Aprendizagem, você deve apresentar os seguintes aprendizados:
+- Definir pré-processamento de dados.
+- Descrever os principais processos dessa etapa de preparação de dados.
+- Aplicar o pré-processamento de dados em uma base de dados.
+
+## Infográfico
+
+![infografico_pre_processamento](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pr%C3%A9-processamento-infografico.png)
+
+## Introdução
+Ao lidar com dados do mundo real, não basta ao cientista ter conhecimento das técnicas e dos algoritmos para mineração de dados. Por mais poderoso que um algoritmo seja, o processo de obtenção de conhecimento a partir de dados brutos ainda dependerá da qualidade destes. Mesmo bases de dados obtidas por sistemas altamente precisos ou que passaram por curadoria humana podem apresentar inconsistências que serão problemáticas nas etapas de busca de informação. Assim, torna-se necessário detectar e corrigir possíveis problemas antes de iniciar o processo de mineração por meio de uma etapa denominada pré-processamento de dados, assunto do qual tratamos neste capítulo.
+
+## Introdução ao pré-processamento de dados
+
+O pré-processamento de dados consiste em um processo de preparação, manipulação e transformação de um conjunto de dados brutos a fi m de que o conhecimento possa ser corretamente obtido por algoritmos e técnicas de mineração de dados (PYLE, 1999). Veja, por exemplo, o Quadro 1.
+
+Quadro 1. Alunos matriculados em uma escola de cursos profissionalizantes
+| Id | Nome | Idade | Estado civil | Gênero | Curso | Profissão |
+| :--- | :---: | :---: | :---: | :---: | :---: | ---: |
+|1 | José Sancho | 8 | Casado | M | *Data science* | Programador |
+| 2 | Maria M. Fernandes | 52 | Viúva | F | Informática básica | Médico |
+| 3 | Helena Rodrigues | | | F | Python | Cientista |
+| 4 | Diego Saulo | M | Python || Preparação de drinks |
+| 5 | | 13 | Solteiro | F | Culinária | |
+
+O Quadro 1 apresenta uma série de alunos cadastrados em uma escola profissionalizante. Observe que há uma série de campos em branco. Além disso, algumas informações estão alocadas em colunas erradas, como, por exemplo, o indivíduo da linha 4, que apresenta idade “M” e estado civil “Python”. Há, ainda, algumas falhas mais difíceis de identificar, como o indivíduo na linha 1, que possui apenas 8 anos de idade, mas consta como casado. Nesse caso, o que estaria errado, a idade ou o estado civil? Todos esses problemas representam um desafio complementar na análise dos dados. E se a empresa decidir identificar quais cursos são mais indicados de acordo com a idade a fim de determinar o melhor público-alvo para uma campanha publicitária eficiente? Não faz sentido investir em publicidade de um curso de informática básica para um programador ou investir em publicidade para um curso de “Preparação de drinks” para menores de 18 anos.
+
+De Castro e Ferrari (2017) definem três principais problemas em dados brutos (Figura 1).
+
+![tipos_problemas](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pre_processamento_tipos_problemas.png)
+
+Veja a descrição de cada problema da Figura 1 a seguir.
+
+1. **Incompletude**: quando há dados, atributos ou objetos ausentes em determinada base de dados.
+2. **Inconsistência**: quando há dados que destoam do que é esperado para determinado campo, como, por exemplo, o indivíduo que apresenta a idade “M” ou o indivíduo de 8 anos de idade que apresenta estado civil casado. Outro exemplo de inconsistência ocorre quando há informações conflitantes vindas de fontes distintas, mas que indicam a mesma informação. Como exemplo, considere um sistema público que reconhece endereços de usuários de fontes distintas, como companhias elétricas e de telefonia. Enquanto uma pode registrar o endereço como “Rua ABC”, a outra pode adotar uma versão mais simplificada, como “R ABC” ou “R. ABC”. 
+3. **Ruído**: pode ser definido como variações indesejadas ou inexplicáveis em uma determinada amostra que podem levar à inconsistência.
+
+Cabe ao cientista de dados identificar se existem dados ausentes, inconsistentes ou que apresentam ruído em sua base de dados e, assim, detectar quais as decisões serão tomadas antes de iniciar o processo de mineração. Uma análise dos tipos de dados presentes no campo “Idade” seria o suficiente para identificar que o indivíduo 4 não pode apresentar a idade “M”, que deve se tratar do campo “Gênero”. Isso é um indicativo de que o sistema deletou campos, alterando a ordem das colunas, o que poderia explicar o fato de o campo “Estado civil” possuir valor “Python”, que aparenta ser um curso. No Quadro 1, “Gênero” e “Curso” estão posicionados lado a lado, o que indica que a linha omitiu as informações dos campos “Idade” e “Estado civil”.
+
+Em uma base de dados grande, seria inviável realizar essa análise manualmente. Entretanto, técnicas simples como construção de histogramas ou definição de categorias permitidas em determinados campos poderiam ser utilizadas. Ainda, poderiam ser feitas análises manuais de pequenas amostras da base de dados, a fim de identificar padrões de erros que poderiam se repetir em outros campos.
+
+## Tipos de pré-processamento de dados
+
+De Castro e Ferrari (2017) destacam cinco principais tarefas no pré-processamento de dados: limpeza, integração, redução, transformação e discretização. A seguir, trataremos de cada uma em detalhes.
+
+### Limpeza
+As etapas de limpeza de dados visam amenizar problemas oriundos das etapas de coleta de dados, como dados ausentes e valores ruidosos (DA SILVA; PERES; BOSCARIOLI, 2017).
+
+### Dados ausentes
+De Castro e Ferrari (2017) defi nem que valores ausentes podem ser resultado de valores ignorados durante a coleta ou que não puderam ser observados. Ainda, dados ausentes podem implicar na perda de informações relevantes para determinado atributo, causando problemas nas etapas subsequentes da mineração de dados.
+
+Ao processo de substituição de valores ausentes com base em outras informações disponíveis no *dataset*, denomina-se **imputação** (DE CASTRO; FERRARI, 2017). Antes de ser realizado, o cientista de dados deve buscar compreender os motivos de tais dados estarem ausentes e o impacto que isso poderá causar na confiabilidade das análises que serão realizadas e na validade e generalização das conclusões obtidas (MCKNIGHT *et al*., 2007).
+
+Se o impacto dos dados ausentes nos resultados for nulo, deve-se optar por não realizar alterações nos dados brutos. Caso se chegue à conclusão de que esses dados são essenciais, deve-se determinar qual é a melhor solução para resolver esse problema.
+
+Da Silva, Peres e Boscarioli (2017) propõem três possíveis soluções para resolver o problema de valores ausentes:
+
+1. Remoção do exemplar que apresenta dados faltantes. Solução simples, mas que pode ser problemática em bases de dados pequenas.
+
+2. Preenchimento manual de valores ausentes. Processo de curadoria manual de dados ausentes, mas que pode ser problemático em bases de dados grandes ou em casos em que a coleta de dados não possa ser refeita.
+
+3. Preenchimento automático de valores. Estabelece um valor para o campo ausente. Pode ser obtido com base em valores mais frequentes encontrados em campos similares de outros exemplares. Pode-se, ainda, utilizar propriedades como a média ou a mediana, ou se basear em técnicas preditivas, como modelos de regressão. Assim como as outras soluções, o preenchimento automático pode ser problemático, uma vez que pode enviesar a base de dados.
+
+### Ruídos
+
+Ruídos em dados consistem em valores que destoam consideravelmente do conjunto de dados (*outliers*) ou, até mesmo, em erros em medições (DA SILVA; PERES; BOSCARIOLI, 2017). Por exemplo, dado um conjunto de dados referentes a vendas de empresa, em determinado mês observa-se um valor negativo. Tal valor não era esperado para o atributo avaliado; logo, possivelmente se trata de um erro. Entretanto, deve-se avaliar o contexto dos dados.
+
+Da Silva, Peres e Boscarioli (2017) propõem duas abordagens para avaliação e tratamento de ruído em dados: inspeção e correção manual com base em análise exploratória, como por meio de técnicas de visualização de dados, ou identificação e limpeza automática por meio de algoritmos usados para anular ou suavizar ruídos (veja mais na seção “Redução”).
+
+### Integração
+
+Bases de dados construídas com dados oriundos de múltiplas fontes podem apresentar inconsistências para representar a mesma informação. Por exemplo, imagine que uma empresa está atualizando sua base de dados a partir de duas fontes distintas. A primeira se refere a uma fi cha cadastral preenchida manualmente por funcionários da empresa. A segunda se trata de um formulário web por meio do qual o próprio cliente realiza seu registro (Figura 2).
+
+![cadastro_cliente](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pre_processamento_cadastro_cliente.png)
+
+![formulario_cadastro](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pre_processamento_formulario_cadastro.png)
+
+Figura 2. Exemplos de fontes distintas de dados: (a) formulário web e (b) formulário preenchido à mão.
+
+Ao buscar integrar essas informações em uma base de dados única, pode-se encontrar certas inconsistências, como a data de nascimento preenchida com padrões diferentes.
+
+Os processos de integração de dados devem levar em consideração os problemas relacionados à redundância de dados. Em geral, esses problemas surgem da inserção de dados repetidos, da ausência de padronizações de nomenclatura ou da prática de armazenar atributos calculados com base em outros campos (DA SILVA; PERES; BOSCARIOLI, 2017). Como solução, pode-se optar por eliminar dados redundantes ou corrigi-los manualmente.
+
+A análise de amostras dos conjuntos de dados para detecção de padrões de inconsistência pode ser eficiente para padronização da base de dados. Como no exemplo anterior, as datas foram inseridas de duas formas distintas: “12-01-1985” e “12 de janeiro de 1985”. Com base nisso, pode-se inferir que outras datas poderão ser registradas da mesma forma. Uma regra que resolveria esse problema envolve detectar a presença da *substring* “de janeiro de” e substituí-la por “-01-” (o mesmo deveria ser feito para os outros meses). Ao fazer isso, pode-se conferir se os dados obtidos de diferentes fontes são equivalentes e se não há algum outro problema, como conflitos gerados por valores diferentes para o campo “Data de nascimento”.
+
+### Redução
+
+Pense no quão difícil seria encontrar uma agulha em um palheiro. E se fosse possível utilizar um ventilador para remover parte da palha, deixando apenas objetos um pouco mais pesados? É claro que sobrariam algumas palhas mais pesadas, mas é inegável que fi caria mais fácil encontrar a agulha nesse cenário.
+
+A mesma analogia pode ser aplicada para mineração de grandes bases de dados. Muitas vezes, bases de dados muito grandes podem dificultar o processo de busca por informações relevantes. Nesse caso, algoritmos de redução de dados agiriam da mesma forma como o ventilador: removendo informações não relevantes.
+
+Segundo Han, Kamber e Pei (2011), os métodos de redução de dados podem ser classificados da seguinte forma.
+
+- **Seleção de atributos (*feature selection*)**: seleciona quais atributos de determinada base de dados são mais relevantes para resolver o problema de ciência de dados em estudo.
+
+- **Compressão de dados**: redução de dimensionalidade que codifica os dados.
+
+- **Redução dos dados**: eliminação de dados pouco relevantes e/ou agrupamento de dados parecidos visando simplificar a base de dados (Figura 3).
+
+![reducao_elementos_atributos](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pre_processamento_reducao_elementos.png)
+**Figura 3**. Redução de elementos (Rn) e atributos (An).
+**Fonte**: Adaptada de De Castro e Ferrari (2017). 
+
+Como exemplo de técnica utilizada para remoção de ruídos, pode-se citar a **decomposição por valores singulares** (do inglês *singular value decomposition*, ou SVD). Nessa técnica da álgebra linear, uma dada matriz A é decomposta em três outras matrizes (USV), na qual S é uma matriz diagonal que armazena os valores singulares. A SVD permite detecção de valores mais significativos e remoção dos valores menos significativos (FALEIROS; YONEYAMA, 2002). A SVD tem sido bastante utilizado, em especial para lidar com grandes volumes de dados, como os obtidos em aplicações de bioinformática (BARROSO *et al*., 2020; MARCOLINO; COUTO; SANTOS, 2010).
+
+Entre os métodos de redução, pode-se destacar, além do método SVD, a **análise de componentes principais** (do inglês *principal component analysis*, ou PCA). A PCA é um método estatístico para redução de dimensionalidade que detecta os componentes que representem as maiores variabilidades nos dados, denominados componentes principais (DE CASTRO; FERRARI, 2017). O conceito básico do PCA envolve a projeção dos dados em um espaço dimensional reduzido. Para isso, ele constrói uma matriz de covariância de dados e determina seus autovetores, que, por sua vez, podem ser usados para determinar a variância dos dados. Na prática, a análise dos componentes principais permite visualizar vetores multidimensionais em, por exemplo, um espaço bidimensional.
+
+Imagine, por exemplo, que as linhas do Quadro 2, a seguir, representam um conjunto de elementos e que as colunas indicam atributos, e que você deseja descobrir quais dos elementos são mais similares com base em seus atributos. 
+
+Observe que, por se tratar de um ambiente multidimensional, a comparação visual entre todos os elementos seria inviável. Uma solução seria aplicar a análise de componentes principais e plotar os dois principais componentes em um espaço bidimensional (Figura 4). Se houver características em comum entre os itens, elas poderão ser visualmente detectadas.
+
+![representacao_bidimensional](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/pre_processamento_representacao_bidimensional.png)
+
+**Figura 4**. Representação em espaço bidimensional de dois componentes principais (PC1 e PC2) de vários elementos. Os pontos A, B e C foram destacados para demonstrar que a proximidade de A e B pode ser correlacionada com uma semelhança entre esses dois itens quando comparados, por exemplo, ao ponto C.
+
+Pelo uso dessa técnica, é possível perceber visualmente que os pontos que representam os componentes principais dos pontos A e B estão próximos, quando comparados ao ponto que representa C. A análise de componentes principais permite a detecção de padrões imperceptíveis à visão humana. Por isso tem sido bastante utilizada em vários campos, como para observação de movimentação de moléculas em simulações computacionais usadas na produção de fármacos.
+
+---
+> ### Saiba mais
+>O objetivo deste capítulo não é apresentar explicações detalhadas de como as análises de componentes principais são calculadas, visando apenas apresentar sua utilidade por meio de um exemplo simples. Para saber mais sobre o assunto, recomendamos consultar um livro de estatística ou um livro dedicado à análise de componentes principais, como *Principal component analysis*, de Jolliffe (2013). 
+---
+
+Ainda utilizando o exemplo do palheiro, imagine que o ventilador estava em uma potência forte o suficiente para remover a própria agulha do palheiro. Com isso, seria impossível encontrá-la, independentemente do tempo gasto. O mesmo pode ser dito dos métodos de redução de dados. Se usados incorretamente, informações relevantes podem ser perdidas, o que comprometerá seriamente as análises. Métodos de redução que permitem a reconstrução de dados originais são **denominados sem perda** (*lossless*), caso não permitam, são denominados **com perda** (*lossy*) (HAN; KAMBER; PEI, 2011).
+
+### Transformação
+
+Bases de dados coletadas, principalmente, pela ação humana podem sofrer diversos problemas de padronização. Por exemplo, imagine uma base de dados que recebe cadastros realizados pelos próprios usuários, como nome e telefone (Quadro 3). Durante a coleta dos dados, nenhum tratamento foi realizado; logo, diversas variações desses campos podem ser encontradas. Por exemplo, alguns usuários digitaram seus nomes com a inicial em maiúsculo, outros digitaram usando apenas letras maiúsculas e outros usaram apenas letras minúsculas. Isso também vale para o campo “Telefone”. Alguns adicionaram apenas o telefone local, enquanto outros adicionaram espaços, traços e, até mesmo, parênteses (para separar o código de área).
+
+**Quadro 3**. Exemplo de cadastro em uma base de dados com nome e telefone
+| Nome | Telefone |
+|:--|--:|
+| JOSÉ MARIA | 555-0011 |
+| Antonio Augusto | (31) 555 0010 |
+| maria de fátima | 5551234 |
+
+Dessa forma, é considerada uma boa prática padronizar os dados, como, por exemplo, padronizar a capitalização das fontes e remover caracteres especiais como acentos. Quanto aos números de telefone, convém remover todos os caracteres não numéricos e formatá-los em um padrão único posteriormente. A quantidade de dígitos também pode ser utilizada para determinar se o usuário
+esqueceu algum dígito, como por exemplo, o código de área.
+
+### Normalização
+Além dos processos de padronização, o método de normalização permite transformar dados numéricos de forma que se tornem mais apropriados para uso nas etapas de mineração de dados (DE CASTRO; FERRARI, 2017). Um simples exemplo é a técnica de normalização Min-Max, que permite a transformação dos dados considerando o menor e o maior valores presentes nos dados. Observe a equação a seguir:
+onde a representa um valor de um valor, representa o novo valor após a normalização, max(a), min(a), novo_max(a) e novo_min(a) representam o maior valor, o menor valor, o novo maior valor desejado e o novo menor valor desejado, respectivamente.
+
+### Exemplo
+Suponha que deseja converter a lista de números 2, 3, 5, 7 em um intervalo que varia entre [0,1]. Logo, o menor número (2) passa a valer 0, e o maior número (7) passa a valer 1. Agora, vamos usar a Equação (1) para determinar os novos valores de 3 e 5:
+
+Assim, min(a) = 2, max(a) = 7, novo_min(a) = 0 e novo_max(a) = 1. Logo para a = 3:
+
+### Discretização
+
+Em certos casos, pode ser necessário converter dados numéricos em dados categóricos. Isso muitas vezes é feito porque certos algoritmos não conseguem lidar com múltiplos tipos de dados ou, às vezes, porque é necessário visualizar determinado conjunto de informações. Esse processo é conhecido como discretização.
+Histogramas são simples exemplos do uso de discretização. Histogramas condensam um intervalo de números em uma determinada categoria. Assim, é possível determinar a quantidade de indivíduos agrupados. 
+
+## Aplicação de pré-processamento de dados
+
+Nesta seção, serão apresentados exemplos práticos de pré-processamento de dados. O estudo de caso foi inspirado na base de dados “US Gun Murders in 2010” (IRIZARRY, 2019). Os *scripts* apresentados foram construídos usando a linguagem de programação R e a ferramenta RStudio. Para os próximos exemplos, usaremos a base de dados “Taxa de homicídios no Brasil no ano de 2017” (MARIANO, 2020).
+
+### Padronização de dados
+Enquanto visualizava uma tabela com dados de homicídios no Brasil no ano de 2017 no software Microsoft Excel, um colaborador descuidado acabou salvando o arquivo, apesar de não ter feito nenhuma modifi cação. Isso acabou causando problemas na codifi cação do arquivo: palavras que possuíam acentos, foram alteradas, como “São Paulo”, que virou “SÃ£o Paulo” (Quadro 4).
+
+| UF |  populacao | sigla | ano | homicidios | regiao |
+|:--|---|---|---|---|--:|
+|Acre | 829619 | AC | 2017 | 516 | norte |
+| Alagoas | 3375823 | AL | 2017 | 1813 | nordeste |
+| AmapÃ¡ | 797722 | AP | 2017 | 383 | norte |
+| Amazonas | 4063614 | AM | 2017 | 1674 | norte |
+| Bahia | 15344447 | BA | 2017 | 7487 | nordeste |
+| CearÃ¡ | 9020460 | CE | 2017 | 5433 | nordeste |
+| Distrito Federal |3039444 | DF | 2017 | 610 | centrooeste |
+| EspÃ rito Santo | 4016356 | ES | 2017 | 1521 | sudeste |
+| GoiÃ¡s | 6778772 | GO | 2017 | 2901 | centrooeste |
+| MaranhÃ£o | 7000229 | MA | 2017 | 2180 | nordeste |
+| Mato Grosso | 3344544 | MT | 2017 | 1102 | centrooeste |
+| Mato Grosso do Sul | 2713147 | MS | 2017 | 659 | centrooeste |
+| Minas Gerais | 21119536 | MG | 2017 | 4299 | sudeste |
+| ParÃ¡ | 8366628 | PA | 2017 | 4575 | norte |
+| ParaÃ ba | 4025558 | PB | 2017 | 1341 | nordeste |
+|ParanÃ¡ | 11320892 | PR | 2017 | 2759 | sul |
+|Pernambuco | 9473266 | PE | 2017 | 5419 | nordeste |
+|PiauÃ | 3219257 | PI | 2017 | 626 | nordeste |
+| Rio Grande do Norte | 3507003 | RN | 2017 | 2203 | nordeste |
+| Rio Grande do Sul | 11322895 | RS | 2017 | 3316 | sul |
+| Rio de Janeiro | 16718956 | RJ | 2017 | 6416 | sudeste |
+| RondÃ´nia | 1805788 | RO | 2017 | 554 | norte |
+| Roraima | 522636 | RR | 2017 | 248 | norte |
+| Santa Catarina | 7001161 | SC | 2017 | 1066 | sul |
+| SÃ£o Paulo | 45094866 | SP | 2017 | 4631 | sudeste |
+| Sergipe | 2288116 | SE | 2017 | 1313 | nordeste |
+ |Tocantins | 1550194 | TO | 2017 | 557 | norte |
+
+Então, utilizando a linguagem R e o RStudio, vamos realizar a padronização dos dados. Primeiramente, vamos importar o arquivo CSV, armazená-lo em uma variável chamada de assassinatos e explorar o objeto criado. 
+
+> assassinatos = read.csv("homicidios _ brasil _ 2017.csv",
+sep=";")
+> str(assassinatos)
+'data.frame': 27 obs. of 6 variables:
+ $ UF : Factor w/ 27 levels "Acre","Alagoas",..: 1 2 3
+4 5 6 7 8 9 10 ...
