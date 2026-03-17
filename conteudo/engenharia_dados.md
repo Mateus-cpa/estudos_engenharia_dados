@@ -555,3 +555,162 @@ Books, 2018.
 
 ![selecao_dados_infografico](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/selecao_de_dados_infografico.png)
 
+## Objetivos de aprendizagem
+
+Ao final deste texto, você deve apresentar os seguintes aprendizados:
+- Definir seleção de dados.
+- Descrever nomenclatura e tipos de dados.
+- Aplicar a seleção de dados em uma base de dados
+
+## Introdução
+A descoberta de conhecimento em bases de dados (do inglês *knowledge discovery in databases*, ou KDD) pode ser realizada a partir de grandes bases de dados, sendo muito útil em diversas áreas. Entretanto, antes de aplicar algoritmos de mineração, deve-se atentar a diversos fatores, como seleção de dados, análise descritiva, pré-processamento e pós-processamento.
+
+Para uma análise de dados eficaz e, por consequência, para descoberta de conhecimento e tomada de decisão, cientistas de dados devem realizar algumas considerações prévias, como estabelecer tanto a significância estatística quanto a prática das tarefas de mineração (CASTRO; FERRARI, 2016). Além disso, devem conhecer seus dados, como estão organizados, quais são os tipos de campos, os erros e as características que poderão influenciar os resultados. Ainda, devem considerar que amostras diferentes dos dados podem resultar em resultados diferentes. Antes de tudo, cientistas de dados devem conhecer o problema avaliado a fundo, além do domínio do negócio, e selecionar com precisão os dados que serão utilizados nas análises.
+
+Neste capítulo, você aprenderá um pouco mais sobre a importância do processo de seleção de conjuntos de dados antes das etapas de mineração de dados. Nesse contexto, determinar dados mais relevantes e entender o domínio do negócio para a seleção dos dados pode ser crucial.
+
+## Os três pilares do KDD
+
+Antes de iniciar o processo de KDD, deve-se atentar para três pilares que fundamentam a área: compreender o problema, avaliar recursos disponíveis e avaliar os resultados obtidos.
+
+### Pilar 1: compreender o problema
+
+O primeiro passo da descoberta de conhecimento é tentar compreender o problema analisado. Para isso, deve-se avaliar como os dados estão organizados e quais são os tipos e as características de atributos desses dados. Logo, pode ser fundamental consultar algum especialista com domínio da aplicação, isto é, um indivíduo que trabalhará diretamente com a aplicação do processo de KDD e que possui conhecimentos prévios e profundos sobre a área estudada. Além disso, o cientista de dados deve compreender os objetivos da aplicação, ou seja, o que é esperado pela equipe que utilizará os modelos e restrições que podem existir (GOLDSCHMIDT; PASSOS, 2005).
+
+### Pilar 2: avaliar recursos disponíveis
+
+Na construção da aplicação de KDD, deve-se atentar aos recursos disponíveis para a solução do problema. Quais programas serão utilizados? Qual é a infraestrutura necessária para executar (isto é, hardware)? Nessa etapa, o cientista de dados responsável pela execução dos processos de KDD deve trabalhar em conjunto com o especialista no domínio da aplicação para melhores compreensão do problema, elaboração de soluções, seleção de ferramentas disponíveis e avaliação dos resultados (GOLDSCHMIDT; PASSOS, 2005).
+
+### Pilar 3: avaliar os resultados obtidos
+
+Os resultados obtidos compreendem os modelos de conhecimento descobertos durante a aplicação. Nessa etapa, é recomendado comparar diferentes modelos construídos durante o processo, a fi m de determinar quais são os melhores parâmetros e métodos para solução do problema (GOLDSCHMIDT;PASSOS, 2005).
+
+## Dados brutos e problemas nos dados
+São chamados de **dados brutos** (*raw data*) os dados disponibilizados na forma em que foram coletados, isto é, sem a obrigação de estarem previamente organizados. 
+
+Imagine um grupo de colaboradores de um instituto de pesquisas realizando entrevistas para um levantamento preliminar de preferência de votos em relação à campanha pela prefeitura de uma cidade X. Os entrevistadores questionaram 2.000 pessoas: 500 responderam ter preferência pelo candidato A, enquanto as outras 500 disseram preferir o candidato B. Entretanto, metade dos entrevistados afirmou que vai votar em branco, nulo, ou não saber em quem votar. Alguns, ainda, manifestaram que poderiam votar em qualquer candidato que não fosse A ou B. Outros afirmaram votar em candidatos C, D ou E, que ainda não confirmaram a candidatura. Observe que o número de eleitores que não vota em candidato A ou B corresponde a uma parcela considerável da população.
+Entretanto, o questionário realizado não contempla todas as possíveis respostas.
+
+Ao modelar o processo de coleta de dados, os pesquisadores poderão levar em consideração as possíveis respostas, mesmo que elas não atendam aos requisitos iniciais da pesquisa. No exemplo indicado, a pesquisa inicialmente considerou apenas duas opções: “A” ou “B” (Figura 1). Se os pesquisadores permitissem que os entrevistados inserissem respostas abertas, seria possível obter respostas mais precisas em relação à disputa de candidatos pela prefeitura. Entretanto, permitir que entrevistados respondam com quaisquer valores pode inserir uma grande variação nos resultados, o que dificultará a análise. Nesse caso, delimitar a pesquisa a dois candidatos inseriria um viés nos resultados e desconsideraria uma porção numerosa da população. Ao permitir que entrevistados sugiram outros valores, os pesquisadores poderão levantar outras opções para serem consideradas nas próximas pesquisas. Além disso, os problemas gerados pela inserção de novos valores poderão ser tratados nas etapas de pré-processamento de dados.
+
+Agora, imagine um sistema eletrônico de coleta de dados sismológicos, isto é, coleta e analisa abalos sísmicos a fim de prever possíveis terremotos (Figura 2). Apesar de ser altamente preciso, o sistema está à mercê de diversos tipos de falhas que poderão impedir que os dados sejam coletados. Por exemplo, picos de energia na rede elétrica poderiam interromper o funcionamento do dispositivo, impedindo que dados sejam coletados em certos períodos. Ou, ainda, imagine uma obra realizada próxima ao local onde os sismógrafos estão instalados: barulhos de explosão poderiam ser falsamente interpretados pelos sismógrafos como possíveis terremotos.
+
+Com base nos exemplos apresentados, pode-se inferir que dados podem ser coletados de diversas fontes, desde coleta manual a sistemas computadorizados. Entretanto, independentemente da fonte, dados brutos podem apresentar diversos tipos de problemas, o que poderá impactar em tarefas
+de mineração.
+
+Segundo Castro e Ferrari (2016), dados brutos podem sofrer três tipos de problemas:
+- **incompletude**, como no caso da falta de dados coletados em certos períodos devido à ausência de energia no sismógrafo;
+
+- **inconsistência**, como no caso de uma pessoa responder algo totalmente fora do escopo da pesquisa política apresentada anteriormente;
+
+- **ruídos**, como no caso das interferências causadas pelas explosões nas
+análises dos sismógrafos.
+
+## Tipos de dados
+Dados podem receber tanto valores quantitativos quanto qualitativos. Segundo Castro e Ferrari (2016), conjuntos de dados podem ser classificadas em três tipos:
+1. não estruturados;
+2. semiestruturados;
+3. estruturados.
+
+Vejamos cada um em detalhes a seguir.
+
+### Dados não estruturados
+
+Um conjunto de dados é chamado de não estruturado quando não possui estrutura organizacional definida. Poderiam ser considerados exemplos de dados não estruturados: livros, artigos, imagens, vídeos e outras ases de dados textuais (CASTRO; FERRARI, 2016).
+
+### Semiestruturados
+
+Conjuntos de dados são classifi cados como semiestruturados quando apresentam certo nível de organização, mas não com uma estrutura completa. Um exemplo de dados semiestruturados são os arquivos XML, que utilizam tags para armazenar dados. No entanto, a estrutura de armazenamento em tags de um arquivo XML não é tão rígida (CASTRO; FERRARI, 2016).
+
+### Dados estruturados
+
+Conjunto de dados são considerados como do tipo estruturado quando os dados são armazenados em posições fixas em arquivos, como planilhas criadas no Excel. As bases de dados estruturadas podem ser mais facilmente analisadas, pois as informações poderão ser armazenadas e acessadas por meio de campos específicos. Entretanto, para que um conjunto de dados seja considerado estruturado, deve ser organizado por meio de um modelo que leve em consideração os tipos de dados armazenados e as relações entre eles (CASTRO; FERRARI, 2016).
+
+Em conjuntos de dados estruturados, linhas de uma tabela também são denominadas objetos, exemplos, instâncias, registros, vetores de entrada ou padrão de entrada e/ou treinamento. Por sua vez, colunas também podem ser denominadas atributos, características (*features*), entradas ou variáveis (CASTRO; FERRARI, 2016).
+
+### Atributos dependentes e independentes
+
+Atributos podem ser dependentes ou independentes. Diz-se que um atributo é **dependente** quando seu valor é defi nido com base em outros atributos. Já os **atributos independentes** não requerem outros atributos para definir seus valores. Atributos independentes são aqueles usados como entrada, enquanto os dependentes são considerados saídas de testes.
+
+Atributos dependentes (saída) e independentes (entrada).
+
+Castro e Ferrari (2016) citam, como exemplo, o índice de massa corporal (IMC), que é definido pela equação: IMC = p/h²
+
+onde p representa o peso (em quilogramas) e h2 representa a altura (dada em metros) elevada ao quadrado. Nesse exemplo, o IMC seria considerado um atributo dependente, pois seu valor depende de outros atributos, peso e altura, estes considerados independentes.
+
+### Tipos de atributos
+
+Castro e Ferrari (2016) ainda defi nem que atributos podem ser classifi cados
+como categóricos ou numéricos (Figura 4).
+
+![tipos_dados](https://raw.githubusercontent.com/Mateus-cpa/estudos_engenharia_dados/refs/heads/main/images/engenharia_dados/selecao_dados_tipos_atributos.png)
+
+Atributos categóricos podem ser:
+
+- **atributos binários**, quando podem receber apenas dois valores possíveis, como 0 ou 1, TRUE ou FALSE, verdadeiro ou falso;
+- **atributos nominais**, quando os valores desse atributo podem receber rótulos distintos, como o atributo “estado civil”, que pode receber os valores “solteiro(a)”, “casado(a)”, “separado(a)” ou “viúvo(a)”;
+- **atributos ordinais**, quando apresentam uma lista de categorias, como o atributo “escolaridade”, que pode receber os valores “ensino fundamental”, “ensino médio”, “graduação”, “mestrado” ou “doutorado”.
+
+Por outro lado, os atributos numéricos podem ser:
+
+- **discretos**, valores inteiros;
+- **contínuos**, valores reais;
+- **razão**, quando o método de medida utiliza o ponto zero, como peso, velocidade, etc.
+
+--- 
+> ### Saiba mais
+> Sistemas de gerenciamento de bancos de dados (SGBD) são classificados da seguinte forma.
+> - Relacionais: quando os dados são armazenados em estruturas fixas que deixam claros os relacionamentos existentes entre os dados. Por exemplo, os SGBD que utilizam a linguagem SQL para consulta, modificação e manipulação em geral de dados, como MySQL, PostgreSQL ou SQLite. Em geral, pode-se afirmar que bancos de dados relacionais armazenam dados estruturados.
+> - Não relacionais: quando não há uma estrutura fixa. Por exemplo, os bancos de dados NoSQL (*Not only SQL*), como o MongoDB, Cassandra ou Voldemort. Bancos de dados NoSQL possuem certo nível de organização. Entretanto, há menor rigidez na forma como esses dados são armazenados, sendo os dados armazenados neles considerados semiestruturados.
+
+## Seleção de dados
+A seleção de dados pode ser compreendida como a identificação de informações em bases de dados existentes que devem ser realmente consideradas durante o processo de descoberta de conhecimento (GOLDSCHMIDT; PASSOS, 2005).
+
+Como exemplo, imagine a construção de um modelo para classificação para avaliar se clientes de uma empresa de empréstimos consignados podem ou não receber empréstimos. Nesse exemplo, o nome do cliente é uma informação irrelevante para a classifi cação. Entretanto, o histórico de empréstimos e pagamentos desse cliente é fundamental.
+
+Segundo Goldschmidt e Passos (2005), a seleção dos dados pode atuar tanto na escolha de indivíduos (registros) quanto na escolha de atributos (características) que devem ser considerados para o processo de classificação. Os algoritmos de mineração podem ser impactados por grandes quantidades de dados; assim, selecionar dados mais propensos para a solução do problema pode melhorar os resultados esperados.
+
+### Seleção de atributos
+Em mineração de dados, a seleção de atributos (também conhecida como seleção de características, seleção de recursos ou *feature selection*) é um importante método para obtenção de características relevantes para um processo de mineração de grandes bases de dados (CAMPOS, 2001). A seleção de atributos pode ser considerada, ainda, uma técnica de redução de dimensionalidade. Observe o exemplo a seguir.
+
+#### Exemplo
+Considere a seguinte tabela, que apresenta as condições climáticas em determinada cidade litorânea.
+| Temperatura (°C) | Probabilidade de chuva (%) | Umidade (%) | Vento (Km/h) | Dia propício para ir à praia? |
+| :--- | :---: | :---: | :---: | ---: |
+| 28 | 0 | 65 | 8 | Sim| 
+| 30 | 10 | 70 | 9 | Sim| 
+| 12 | 0 | 20 | 8 | Não| 
+| 10 | 0 | 35 | 10 | Não| 
+| 29 | 100 | 80 | 10 | Não| 
+| 0 | 0 | 10 | 6 | Não| 
+| 23 | 5 | 58 | 9 | Sim| 
+| 35 | 3 | 82 | 14 | Sim| 
+
+Observe que as quatro primeiras colunas indicam previsões para determinados dias em relação a temperatura, probabilidade de chuva, umidade e velocidade do vento, respectivamente. A última coluna contém um rótulo que indica se o dia será propício ou não para ir à praia.
+
+Agora, suponha que uma pessoa decidiu ler a previsão do tempo para o próximo dia e está decidindo se vai à praia ou não. Qual seria a resposta mais indicada? Veja a previsão do tempo na tabela abaixo. 
+
+| Temperatura (°C) | Probabilidade de chuva (%) | Umidade (%) | Vento (Km/h) | Dia propício para ir à praia? | 
+| :--- | :---: | :---: | :---: | ---: |
+| 32 | 3 | 59 | 10 | ?| 
+
+A resposta é óbvia: sim, o próximo dia é propício para ir à praia. Esse exemplo pode parecer trivial ao olhar humano, mas ele destaca problemas que poderiam atrapalhar algoritmos de mineração. Veja-os abaixo. 
+- Vento: o valor obtido no campo vento é idêntico à duas linhas referentes a dias não propícios para ir à praia (em uma amostra com 4 elementos, isso representa 50% dos dados).
+
+- Umidade: os valores de umidade geralmente são mais altos em períodos quentes e mais baixos em períodos frios, mas há dias com alta umidade não propícios para ir à praia.
+
+- Temperatura e probabilidade de chuva: são os campos mais importantes para determinar se o dia será ou não propício para ir à praia.
+
+É obvio dizer que dias frios ou chuvosos não são propícios para ir à praia. Entretanto, um algoritmo de mineração de dados poderia ter problemas se usasse todos os dados apresentados para construir um classificador. Assim, a ação humana é necessária para determinar quais campos são mais importantes. A solução mais simples para o problema seria simplesmente remover as colunas umidade e vento, e usar apenas as colunas temperatura e probabilidade de chuva para classificar.
+
+É claro que nem todos os problemas relacionados à seleção de atributos serão tão simples quanto esse, podendo exigir técnicas mais avançadas para detecção dos elementos mais importantes, como a análise exploratória de dados e as técnicas de redução dimensional. 
+
+## Referências
+CAMPOS, T. E. de. Seleção de características. 2001. Disponível em: http://www.vision.ime.usp.br/~teo/publications/dissertacao/node37.html. Acesso em: 19 ago. 2020.
+
+CASTRO, L. N. de; FERRARI, D. G. Introdução a mineração de dados: conceitos básicos, algoritmos e aplicações. São Paulo: Saraiva, 2016.
+
+GOLDSCHMIDT, R.; PASSOS, E. Data mining: um guia prático. Rio de Janeiro: Campus, 2005.
+
+GROTZINGER, J.; JORDAN, T. Para entender a terra. 6. ed. Porto Alegre: Bookman, 2013.
+
